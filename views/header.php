@@ -72,8 +72,8 @@
 			<a href="#contas" title="">Contas</a>
 			<ul>
 				<span class="balloonArrow"></span>
-				<li class="nav-account-view"><a href="#contas" title="Visualizar todas as minhas contas">Ver todas as contas</a></li>
-				<li class="nav-account-add"><a href="#adicionarConta" title="Adicionar uma nova conta">Adicionar uma conta</a></li>
+				<li class="nav-account-add"><a href="#adicionarConta" title="Adicionar uma nova conta">Criar nova conta</a></li>
+				<li class="nav-account-view"><a href="#contas" title="Visualizar todas as minhas contas">Ver todas</a></li>
 			</ul>
 		</li>
 		<li class="nav-tags">
@@ -81,9 +81,8 @@
 			<ul>
 				<span class="balloonArrow"></span>
 				<!--<li class="nav-tag-edit"><a href="#editarMarcadores" title="Escolher e editar um marcador">Editar marcadores</a></li>-->
-				<li class="nav-tag-view-one" style="display:none;"><a href="#verMarcador" title="Visualizar um marcador">Ver marcador</a></li>
-				<li class="nav-tag-view"><a href="#marcadores" title="Visualizar todas os marcadores">Ver lista de marcadores</a></li>
-				<li class="nav-tag-add"><a href="#adicionarMarcador" title="Adicionar um marcador">Adicionar um marcador</a></li>
+				<li class="nav-tag-add"><a href="#adicionarMarcador" title="Adicionar um marcador">Criar novo marcador</a></li>
+				<li class="nav-tag-view"><a href="#marcadores" title="Visualizar todas os marcadores">Ver todos</a></li>
 			</ul>
 		</li>
 		<!--<li class="nav-profile"><a href="#meuPerfil" title="Visualizar e editar meu perfil">Meu perfil</a></li>-->
