@@ -1,1 +1,1679 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;vertical-align:baseline}:focus{outline:0}body{line-height:1;color:black;background:white}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{text-align:left}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:"" ""}input{font-family:inherit;font-size:inherit}article,aside,dialog,figure,footer,header,nav,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;display:block}a{text-decoration:none;color:#73a8c0}button::-moz-focus-inner,input::-moz-focus-inner{border:0}html{height:100%}body{font-family:Verdana, Geneva, sans-serif;font-size:11px;color:#666;height:100%;background:url(../_img/backgrounds/body.jpg) repeat-x center top #fff;background-attachment:scroll}@font-face{font-family:Sketch;src:url("SketchFlowPrint.ttf")}body::-webkit-scrollbar{width:10px;height:100%;border-left:1px solid #CCC;background:#F7F7F7}body::-webkit-scrollbar:hover{background:#e5e5e5}body::-webkit-scrollbar-button:start:decrement,body::-webkit-scrollbar-button:end:increment{height:30px;display:none;background-color:transparent}body::-webkit-scrollbar-track-piece{background-color:rgba(255,255,255,0.5)}body::-webkit-scrollbar-thumb:vertical{height:50px;background-color:rgba(115,168,192,0.3);-webkit-border-radius:3px;-webkit-transition:all 200ms ease-in-out}body::-webkit-scrollbar-thumb:vertical:hover{background-color:rgba(115,168,192,0.6)}h2{font-family:Sketch, Verdana;margin:0 0 35px 0;font-size:16px;color:#73a8c0}h3{font-size:12px;margin:0 0 5px 0;background-position:10px center;background-repeat:no-repeat;position:relative}.wrap,#header,#footer,#navigation,#contentWrap{width:990px;margin:auto}#mainContent{float:left;width:720px}.clear{display:block;clear:both;width:100%;height:1px}#giveFeedback{width:36px;height:119px;background:url(../_img/feedback.png) no-repeat 0 0;text-indent:-999%;position:fixed}#contentLoading{width:100%;height:325px;background:url(../_img/loading.gif) no-repeat center center;text-align:center}#contentLoading p{padding:29% 0 0 0}.popUp .loading{width:100%;height:110px;background:url(../_img/loading.gif) no-repeat center center;text-align:center}.popUp .loading p{padding:95px 0 0 0}#loadingRequest{background:#FF9;border:1px solid #FC3;position:fixed;margin:-10px 0 0 -100px;left:50%;padding:15px 0 10px 0;top:0;width:150px;text-align:center;border-radius:10px;z-index:1010;opacity:.9;font-size:10px;display:none}.balloonArrow{display:block;width:15px;height:9px;background:url(../_img/balloonArrow.png) no-repeat left top;position:absolute;top:-9px;left:15px}#ui-tip{border:1px solid #73A8C0;background:white;border-radius:5px;padding:5px;font-size:10px;opacity:.8;box-shadow:3px 3px 5px rgba(0,0,0,0.2)}#clouds{background:url(../_img/backgrounds/clouds.png) repeat-x left top}.newUser{margin-left:-270px}.newUser h2{font-size:20px}.newUser p{margin-bottom:20px}#header{height:225px;margin-bottom:20px;color:#73A8C0;position:relative;z-index:2}#header h1{background:url(../_img/backgrounds/logoBg.png) no-repeat left top;width:326px;height:113px;padding:7px 0 0 17px;float:left}#header h1 a{width:292px;height:97px;display:block}#userArea{width:202px;height:69px;float:right;background:url(../_img/backgrounds/userAreaLoggedBg.png) no-repeat left top;padding:7px 17px 0 17px}#userArea .avatar{width:55px;height:55px;position:relative;float:left;margin:0 5px 0 0}#userArea .avatar .avatarEffect{width:55px;height:55px;display:block;background:url(../_img/avatarEffect.png) no-repeat left top;position:absolute;top:0;left:0}#userArea .welcome{font-size:12px;font-weight:bold;margin-bottom:3px}#userArea .logInfo{margin-bottom:5px}#userArea .btnExit{float:right;width:39px;height:22px;display:block;background:url(../_img/btn/buttonsSprite.png) no-repeat 0 0;text-indent:-999px;font-size:0;font-weight:0}#userArea .btnExit:hover,#userArea .btnExit:focus{background-position:-39px top}#userArea .btnExit:active{background-position:-78px top}#navigation{margin-bottom:30px}#navigation ul{display:inline-block}#navigation li{font-weight:bold;color:#73a8c0;display:inline-block;margin:0 25px 0 0}#navigation li{-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}#navigation li:hover{background:#dfebf0}#navigation li a{text-decoration:none;color:inherit;padding:7px 10px;display:block}#navigation li ul{background:white;display:none;position:absolute;padding:5px 10px 5px 10px;margin:3px 0 0 0}#navigation li ul{background:rgba(255,255,255,0.9);-moz-box-shadow:0px 0px 7px rgba(0,0,0,0.15);-webkit-box-shadow:0px 0px 7px rgba(0,0,0,0.15);box-shadow:0px 0px 7px rgba(0,0,0,0.15);-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}#navigation li ul li{display:list-item;color:#999;font-weight:normal;margin:0}#navigation li ul li a{padding:5px 5px 5px 20px}#navigation li.active{color:white;background:#73a8c0}#navigation .nav-account-edit a,#navigation .nav-account-view a,#navigation .nav-account-add a,#navigation .nav-tag-edit a,#navigation .nav-tag-view a,#navigation .nav-tag-add a{background-repeat:no-repeat;background-position:left center}#navigation .nav-account-edit a,#navigation .nav-tag-edit a{background-image:url(../_img/icons/pencil-small.png)}#navigation .nav-account-view a,#navigation .nav-tag-view a{background-image:url(../_img/icons/eye-small.png)}#navigation .nav-account-add a,#navigation .nav-tag-add a{background-image:url(../_img/icons/plus-small.png)}#sidebar{width:200px;float:left;margin:0 70px 0 0;min-height:10px}#sidebar h3{background-color:#f7f7f7;display:block;padding:5px 0 5px 35px}#sidebar h3 .actions{display:none}#sidebar h3 .actions{float:right;top:-20px;right:0;background:#F7F7F7;position:absolute;padding-left:5px;border-radius:5px 5px 0 0}#sidebar h3 a{color:inherit}#sidebar .account{margin:0 0 30px 0}#sidebar .account:hover{background-color:#f7f7f7}#sidebar .account:hover .actions{display:block}#sidebar .account a:hover{color:#73A8C0}.tableList>li{border-bottom:1px solid #ebebeb;padding:5px 3px 5px 3px}.tableList>li.subtitle{border:none;font-weight:bold;padding-top:10px}.tableList .amount{float:right}.tableList .total{font-weight:bold;color:#666}.tableList tr:hover:not(.total):not(.removed) td{background-color:#f7f7f7}.tableList tr:hover:not(.total):not(.removed) .actions{display:table-cell}.tableList tr:hover:not(.total):not(.removed) .amount{display:none}.tableList tr.removed{opacity:.4}.tableList td{border-bottom:1px solid #ebebeb;padding:7px 5px 5px 5px;vertical-align:middle;white-space:nowrap}.tableList td.amount{float:none;text-align:right}.tableList tr[data-type="3"] td.amount{color:#666}.tableList tr[data-type="2"] td.amount{color:#30a168}.tableList tr[data-type="1"] td.amount{color:#c63a3a}.tableList td.count{font-size:9px;color:#999;padding-left:10px}.tableList td.date{color:#999;font-size:10px}.tableList td.name span{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.block .tableList td.name span{width:155px}.tableList .actions{padding:0;display:none;text-align:right}.tableList .actions span{display:inline-block;text-indent:-999px;font-size:0;padding:5px 0 0 0;margin:0;height:13px;background-position:center center}.tableList .actions span+span{margin-left:-3px}.tableList td h3{margin:0}.tableList td.noData{white-space:normal;line-height:15px;border:none;padding:5px 5px 5px 25px;background:url(../_img/icons/exclamation.png) no-repeat left center #f7f7f7}.cashFlow{width:100%}.cashFlow th[scope="rowgroup"]{padding-top:15px}.cashFlow td,.cashFlow th{border-bottom:1px solid #ebebeb;padding:7px 5px 5px 5px;vertical-align:middle;white-space:nowrap}.cashFlow tfoot td,.cashFlow tfoot th{background-color:#f7f7f7;font-size:13px;font-weight:bold}.cashFlow td.amount,.cashFlow th[scope="row"]{text-align:right}.cashFlow .partialTotalAmount td,.cashFlow .partialTotalAmount th{padding-top:20px}.cashFlow .actions{padding:0;display:none;text-align:right}.cashFlow .actions span{display:inline-block;text-indent:-999px;font-size:0;padding:5px 0 0 0;margin:0;height:13px;background-position:center center}.cashFlow .actions span+span{margin-left:-3px}.cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) td{background-color:#f7f7f7}.cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) .actions{display:table-cell}.cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) .amount{display:none}.actions{text-align:right;min-height:25px}.actions li{background-repeat:no-repeat;background-position:0 center;padding:5px 0;margin:5px 0 0 0;display:block;cursor:pointer;float:left;height:100%}.actions a{color:#999;font-size:10px;font-weight:normal}.actions a:hover{color:#73A8C0}.actions>span{display:inline-block;cursor:pointer;background-repeat:no-repeat;background-position:0 center;cursor:pointer;height:20px}.actions>span a{display:block;width:100%;height:100%}.actions .addTrans{background-image:url(../_img/icons/plus-button.png);width:128px;float:right}.actions .editSmall{background-image:url(../_img/icons/pencil-small.png);width:20px}.actions .removeSmall{background-image:url(../_img/icons/cross-small.png);width:20px}.actions .viewAll{background-image:url(../_img/icons/eye.png)}.actions .viewSmall{background-image:url(../_img/icons/eye.png);width:20px}.actions .goBack{background-image:url(../_img/icons/arrow-curve-180-left.png);float:right}h2 .actions{line-height:22px}h2 .actions>span{padding-left:22px}#monthBalance h3{background-image:url(../_img/icons/chart-up-color.png)}#tagTransactions h3{background-image:url(../_img/icons/chart-up-color.png)}#transactionsList h3{background-image:url(../_img/icons/eye.png)}#lastTransactions h3{background-image:url(../_img/icons/points.png)}#mostSpending h3{background-image:url(../_img/icons/smiley-cry.png)}#cheaper h3{background-image:url(../_img/icons/smiley-grin.png)}#myImportantTags h3{background-image:url(../_img/icons/tags-label.png)}#allTags h3{background-image:url(../_img/icons/tags-label.png)}#assetAllocation h3{background-image:url(../_img/icons/smiley-money.png)}#accountList>h3{background-image:url(../_img/icons/zone-money.png)}.transferTo{background:url(../_img/icons/arrow.png) no-repeat left center;display:inline-block;width:16px;height:16px;vertical-align:middle;margin:0 10px}.creditCard h3{background-image:url(../_img/icons/credit-card.png);color:inherit!important}.checking h3{background-image:url(../_img/icons/money-coin.png);color:inherit!important}.cash h3{background-image:url(../_img/icons/wallet.png);color:inherit!important}.investment h3{background-image:url(../_img/icons/point.png);color:inherit!important}.others h3{background-image:url(../_img/icons/money.png);color:inherit!important}.creditCard{color:#d98b26}.cash{color:#5362d9}.investment{color:#d9539b}.checking{color:#25a19d}.amount.positive{color:#30a168}.amount.negative{color:#c63a3a}tr.toDo td.name{background:url(../_img/icons/clock-small.png) no-repeat left center;padding-left:15px}.calendarIco{background:url(../_img/icons/calendar-blue.png) no-repeat center center;width:25px;height:25px;display:inline-block;cursor:pointer}.blockDistance{width:40px;display:block;float:left;height:20px}.block{margin:0 0 40px 0;width:340px;float:left;position:relative}.block{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.block.double{width:100%;float:none}.block h3{color:#73a8c0;margin:0 0 20px 0;padding:2px 0 2px 23px;background-position:0 center;background-repeat:no-repeat}.block h3 .actions{float:right}.block h3 .actions span{padding-left:20px;height:15px}.block .tableList{width:100%}.block.expanded .balanceInTitle{display:none}.block.collapsed{background:url(../_img/bottomArrow.png) no-repeat 10px center #f7f7f7;padding:7px 0 7px 35px;cursor:pointer;margin-bottom:20px}.block.collapsed h3{margin-bottom:0}.block.expanded .content{margin-top:20px}.block.collapsed .monthSelectInTitle,.block.collapsed .content{display:none}.block.collapsed .balanceInTitle{display:block;float:right;margin:9px 5px 0 0;color:#999;font-weight:bold;position:absolute;top:0;right:0}.block.collapsed .balanceInTitle span{padding-left:20px}.block .monthSelectInTitle{margin:0 5px 0 0;position:absolute;top:0;right:0}.noData{white-space:normal;line-height:15px;border:none;padding:5px 5px 5px 30px;background:url(../_img/icons/exclamation.png) no-repeat 5px center #f7f7f7}.block .graph{height:240px}#monthBalanceGraph{height:250px}.calendar{border:1px solid #cdcdcd;color:#666;padding:2px 0 2px 5px;width:105px;background:url(../_img/backgrounds/datePickerInputBg.png) repeat-x right bottom;cursor:pointer}.calendar{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-box-shadow:0 0 3px rgba(0,0,0,0.1);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.1);box-shadow:0 0 3px rgba(0,0,0,0.1)}.ui-datepicker{background:white;padding:10px;display:none;margin:10px 0 0 0}.ui-datepicker{background:rgba(255,255,255,0.9);-moz-box-shadow:0px 0px 7px rgba(0,0,0,0.15);-webkit-box-shadow:0px 0px 7px rgba(0,0,0,0.15);box-shadow:0px 0px 7px rgba(0,0,0,0.15);-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}.ui-datepicker .ui-datepicker-close{margin:10px 0 0 0}.ui-datepicker select:first-child{margin-right:10px}.ui-datepicker-current,.ui-datepicker-calendar,.ui-datepicker-prev,.ui-datepicker-next{display:none}.fullCalendar .ui-datepicker-current,.fullCalendar .ui-datepicker-calendar,.fullCalendar .ui-datepicker-prev,.fullCalendar .ui-datepicker-next{display:block}.fullCalendar .ui-datepicker-prev{float:left;cursor:pointer;background:url(../_img/icons/control-180.png) no-repeat center center;width:16px;height:16px;text-indent:-999%}.fullCalendar .ui-datepicker-next{float:right;cursor:pointer;background:url(../_img/icons/control.png) no-repeat center center;width:25px;height:16px;text-indent:-999%}.fullCalendar .ui-datepicker-title{float:left;width:155px;text-align:center;padding:2px 0 0 0}.fullCalendar .ui-datepicker-calendar{clear:both;margin:25px 0 0 0}.fullCalendar .ui-datepicker-week-end{color:#999}.fullCalendar .ui-datepicker-calendar thead th{width:28px;text-align:center;font-size:10px;padding:0 0 10px 0}.fullCalendar .ui-datepicker-calendar td{text-align:center;height:18px}.fullCalendar .ui-datepicker-calendar td a{padding:1px 7px;border:1px solid transparent}.fullCalendar .ui-datepicker-calendar td a.ui-state-highlight{background:#ffffdf;border:1px solid #ececb9}.fullCalendar .ui-datepicker-calendar td a:hover,.fullCalendar .ui-datepicker-calendar td a.ui-state-active{background:#F7F7F7;border:1px solid #CCC}.ui-datepicker .ui-datepicker-close,input[type=submit],.btnOk{background:url(../_img/backgrounds/buttonOkBg.png) repeat-x left bottom;border:1px solid #9ce682;color:#666;font-size:11px;padding:4px 5px;cursor:pointer;float:right}input[type=button]:active{background-image:url(../_img/backgrounds/InputBgInv.png);background-position:top left}.ui-datepicker .ui-datepicker-close:active,input[type=submit]:active,input[type=button].btnOk:active{background-image:url(../_img/backgrounds/buttonOkBgInv.png)}.ui-datepicker .ui-datepicker-close:focus,input[type=submit]:focus,input[type=button].btnOk:focus{background-image:url(../_img/backgrounds/buttonOkBgInv.png)}select,input{-moz-box-shadow:0px 0px 7px rgba(0,0,0,0.15);-webkit-box-shadow:0px 0px 7px rgba(0,0,0,0.15);box-shadow:0px 0px 7px rgba(0,0,0,0.15)}select,input{border:none;background:url(../_img/backgrounds/InputBg.png) repeat-x left bottom;border:1px solid #cdcdcd;color:#999;padding:3px 5px;font-size:11px;font-family:inherit}input{padding:4px 5px}select{cursor:pointer}select:focus,input[type=text]:focus,input[type=password]:focus{border:1px solid #999;background-image:url(../_img/backgrounds/InputBgInv.png);background-position:top left}input[type=button]{cursor:pointer}.tags{color:#666;font-size:9px}.tags .tagged{background:url(../_img/backgrounds/taggedBg.png) left center no-repeat;padding:4px 5px 6px 10px;position:relative;cursor:default}.tags .tagged span{display:block;position:absolute;right:0;top:0;height:100%;width:5px;background:url(../_img/backgrounds/taggedBg.png) no-repeat right center}#blackout{background:#73a8c0;background:rgba(115,168,192,0.6)}.popUp{background:white;padding:20px 25px}.popUp{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-box-shadow:0 0 15px rgba(0,0,0,0.3);-webkit-box-shadow:0 0 15px rgba(0,0,0,0.3);box-shadow:0 0 15px rgba(0,0,0,0.3)}.popUp h3{margin-bottom:35px}.popUp .popClose{background:url(../_img/icons/cross-circle.png) no-repeat center center;display:block;width:16px;height:16px;text-indent:-999%;position:absolute;right:10px;top:10px}.popUp .fieldset{margin:25px 0 0 0}.popUp .message{left:20px;right:20px;top:40px;position:absolute}.ui-autocomplete{position:absolute;cursor:default;background:none repeat scroll 0 0 rgba(255,255,255,0.9);padding:5px}.ui-autocomplete{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-box-shadow:0 0 3px rgba(0,0,0,0.1);-webkit-box-shadow:0 0 3px rgba(0,0,0,0.1);box-shadow:0 0 3px rgba(0,0,0,0.1)}.ui-autocomplete li a{display:block;padding:5px;cursor:pointer}.ui-autocomplete li a.ui-state-hover{background:#F7F7F7;border:1px solid #CCC}form fieldset:first-child,form fieldset:nth-of-type(1){margin-top:0}form fieldset{margin:15px 0 0 0}form label{width:100px;display:inline-block;padding:6px 0 0 0}form select+label,form input[type=password]+label{margin-left:40px;margin-right:10px;width:auto}form .valid{color:#999;padding-left:10px}form #accountName,form #tagName,form #profileName{width:190px}form #transDescription{width:290px}form #selectTags{width:290px}form #profilePassword,form #checkProfilePassword{width:80px}form #transAmount{width:90px;text-align:right}form #profilePassword+label{margin-left:50px}form #initialBalance{width:70px;text-align:right}form .fullCalendar{width:68px}form .fullCalendar+.calendarIco{vertical-align:top;opacity:.6}form .fullCalendar+.calendarIco:hover{opacity:1}form input+.exclamation,form select+.exclamation{vertical-align:middle;margin:0 0 0 5px}form input.verify,form select.verify{border:1px solid #f2f180}.selectOptions{display:inline-block;vertical-align:top}.selectOptions>span{opacity:.6;display:block;float:left;width:25px;height:25px;cursor:pointer;text-indent:-99999px;border:1px solid white;background-position:center center;background-repeat:no-repeat;margin-right:10px}.selectOptions>span:hover{opacity:1}.selectOptions>span.selected{background-color:#F7F7F7;border:1px solid #CCC;opacity:1}.selectOptions.transType>span[data-value="2"]{background-image:url(../_img/icons/plus-octagon.png)}.selectOptions.transType>span[data-value="1"]{background-image:url(../_img/icons/minus-octagon.png)}.selectOptions.transType>span[data-value="3"]{background-image:url(../_img/icons/arrow-switch.png)}.selectOptions.accountType>span[data-value="1"]{background-image:url(../_img/icons/credit-card.png)}.selectOptions.accountType>span[data-value="2"]{background-image:url(../_img/icons/money-coin.png)}.selectOptions.accountType>span[data-value="3"]{background-image:url(../_img/icons/point.png)}.selectOptions.accountType>span[data-value="4"]{background-image:url(../_img/icons/wallet.png)}.selectOptions.accountType>span[data-value="5"]{background-image:url(../_img/icons/money.png)}.message{font-weight:bold;padding:5px 10px;border-bottom:2px solid #999;color:#999;background:#f7f7f7;margin:0 0 10px 0;position:fixed;left:0;top:0;right:0;z-index:10}.message .wrap{background-position:40px center;background-repeat:no-repeat}.message.error{background-color:#f6e7e7;border-color:#c63a3a;color:#c63a3a}.message.success{background-color:#e1f7e4;border-color:#92b997;color:#92b997}.message.success .wrap{background-image:url(../_img/icons/tick.png);padding-left:65px}.message.alert{background-color:#ffffdf;border-color:#ececb9;color:#cbcb8d}.message strong{text-decoration:underline}.footerInfo{background:#F7F7F7;text-align:right;padding:10px 5px;margin:10px 0 0 0;clear:both}
+/*
+ * Check Project
+ * 
+ * @project		Check
+ * @site		--
+ * @version		1.1
+ * @package		layout
+ * @author		Rafael Heringer Carvalho
+ * @copyright	2011 Letsrider!
+ */
+/* ERIC'S MEYER RESET
+=============================*/
+/* line 16, source/style.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+/* line 17, source/style.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 17, source/style.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+/* line 18, source/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 18, source/style.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 19, source/style.scss */
+caption, th, td {
+  text-align: left;
+}
+
+/* line 20, source/style.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 21, source/style.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 22, source/style.scss */
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* line 23, source/style.scss */
+article, aside, dialog, figure, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  display: block;
+}
+
+/* line 24, source/style.scss */
+a {
+  text-decoration: none;
+  color: #73a8c0;
+}
+
+/* line 25, source/style.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+/* BASIC DEF
+=============================*/
+/* line 29, source/style.scss */
+html {
+  height: 100%;
+}
+
+/* line 30, source/style.scss */
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  color: #666;
+  height: 100%;
+  background: url(../_img/backgrounds/body.jpg) repeat-x center top white;
+  background-attachment: scroll;
+}
+
+@font-face {
+  font-family: Sketch;
+  src: url("SketchFlowPrint.ttf");
+}
+
+/* Scrollbars in Chrome */
+/* line 34, source/style.scss */
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 100%;
+  border-left: 1px solid #CCC;
+  background: #F7F7F7;
+}
+
+/* line 35, source/style.scss */
+body::-webkit-scrollbar:hover {
+  background: #e5e5e5;
+}
+
+/* line 37, source/style.scss */
+body::-webkit-scrollbar-button:start:decrement,
+body::-webkit-scrollbar-button:end:increment {
+  height: 30px;
+  display: none;
+  background-color: transparent;
+}
+
+/* line 38, source/style.scss */
+body::-webkit-scrollbar-track-piece {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 39, source/style.scss */
+body::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: rgba(115, 168, 192, 0.3);
+  -webkit-border-radius: 3px;
+  -webkit-transition: all 200ms ease-in-out;
+}
+
+/* line 40, source/style.scss */
+body::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: rgba(115, 168, 192, 0.6);
+}
+
+/* Titles */
+/* line 43, source/style.scss */
+h2 {
+  font-family: Sketch, Verdana;
+  margin: 0 0 35px 0;
+  font-size: 16px;
+  color: #73a8c0;
+}
+
+/* line 44, source/style.scss */
+h3 {
+  font-size: 12px;
+  margin: 0 0 5px 0;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* @section		LAYOUT & STRUCTURE
+=============================*/
+/* Others */
+/* line 53, source/style.scss */
+.wrap,
+#header,
+#footer,
+#navigation,
+#contentWrap {
+  width: 990px;
+  margin: auto;
+}
+
+/* line 54, source/style.scss */
+#mainContent {
+  float: left;
+  width: 720px;
+}
+
+/* line 55, source/style.scss */
+.clear {
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 1px;
+}
+
+/* line 56, source/style.scss */
+#giveFeedback {
+  width: 36px;
+  height: 119px;
+  background: url(../_img/feedback.png) no-repeat 0 0;
+  text-indent: -999%;
+  position: fixed;
+}
+
+/* Loading */
+/* line 59, source/style.scss */
+#contentLoading {
+  width: 100%;
+  height: 325px;
+  background: url(../_img/loading.gif) no-repeat center center;
+  text-align: center;
+}
+
+/* line 60, source/style.scss */
+#contentLoading p {
+  padding: 29% 0 0 0;
+}
+
+/* line 61, source/style.scss */
+.popUp .loading {
+  width: 100%;
+  height: 110px;
+  background: url(../_img/loading.gif) no-repeat center center;
+  text-align: center;
+}
+
+/* line 62, source/style.scss */
+.popUp .loading p {
+  padding: 95px 0 0 0;
+}
+
+/* line 63, source/style.scss */
+#loadingRequest {
+  background: #FF9;
+  border: 1px solid #FC3;
+  position: fixed;
+  margin: -10px 0 0 -100px;
+  left: 50%;
+  padding: 15px 0 10px 0;
+  top: 0;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 1010;
+  opacity: .9;
+  font-size: 10px;
+  display: none;
+}
+
+/* Tooltip */
+/* line 66, source/style.scss */
+.balloonArrow {
+  display: block;
+  width: 15px;
+  height: 9px;
+  background: url(../_img/balloonArrow.png) no-repeat left top;
+  position: absolute;
+  top: -9px;
+  left: 15px;
+}
+
+/* Tip */
+/* line 69, source/style.scss */
+#ui-tip {
+  border: 1px solid #73A8C0;
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  opacity: .8;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+/* Clouds */
+/* line 72, source/style.scss */
+#clouds {
+  background: url(../_img/backgrounds/clouds.png) repeat-x left top;
+}
+
+/* New user Area */
+/* line 75, source/style.scss */
+.newUser {
+  margin-left: -270px;
+}
+
+/* line 76, source/style.scss */
+.newUser h2 {
+  font-size: 20px;
+}
+
+/* line 77, source/style.scss */
+.newUser p {
+  margin-bottom: 20px;
+}
+
+/* Header */
+/* line 80, source/style.scss */
+#header {
+  height: 225px;
+  margin-bottom: 20px;
+  color: #73A8C0;
+  position: relative;
+  z-index: 2;
+}
+
+/* line 81, source/style.scss */
+#header h1 {
+  background: url(../_img/backgrounds/logoBg.png) no-repeat left top;
+  width: 326px;
+  height: 113px;
+  padding: 7px 0 0 17px;
+  float: left;
+}
+
+/* line 82, source/style.scss */
+#header h1 a {
+  width: 292px;
+  height: 97px;
+  display: block;
+}
+
+/* User Area */
+/* line 85, source/style.scss */
+#userArea {
+  width: 202px;
+  height: 69px;
+  float: right;
+  background: url(../_img/backgrounds/userAreaLoggedBg.png) no-repeat left top;
+  padding: 7px 17px 0 17px;
+}
+
+/* line 86, source/style.scss */
+#userArea .avatar {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+/* line 87, source/style.scss */
+#userArea .avatar .avatarEffect {
+  width: 55px;
+  height: 55px;
+  display: block;
+  background: url(../_img/avatarEffect.png) no-repeat left top;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 88, source/style.scss */
+#userArea .welcome {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+/* line 89, source/style.scss */
+#userArea .logInfo {
+  margin-bottom: 5px;
+}
+
+/* line 90, source/style.scss */
+#userArea .btnExit {
+  float: right;
+  width: 39px;
+  height: 22px;
+  display: block;
+  background: url(../_img/btn/buttonsSprite.png) no-repeat 0 0;
+  text-indent: -999px;
+  font-size: 0;
+  font-weight: 0;
+}
+
+/* line 92, source/style.scss */
+#userArea .btnExit:hover,
+#userArea .btnExit:focus {
+  background-position: -39px top;
+}
+
+/* line 93, source/style.scss */
+#userArea .btnExit:active {
+  background-position: -78px top;
+}
+
+/* Navigation */
+/* line 96, source/style.scss */
+#navigation {
+  margin-bottom: 30px;
+}
+
+/* line 97, source/style.scss */
+#navigation ul {
+  display: inline-block;
+}
+
+/* line 98, source/style.scss */
+#navigation li {
+  font-weight: bold;
+  color: #73a8c0;
+  display: inline-block;
+  margin: 0 25px 0 0;
+}
+
+/* line 99, source/style.scss */
+#navigation li {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* CSS3 */
+/* line 100, source/style.scss */
+#navigation li:hover {
+  background: #dfebf0;
+}
+
+/* line 101, source/style.scss */
+#navigation li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 7px 10px;
+  display: block;
+}
+
+/* line 102, source/style.scss */
+#navigation li ul {
+  background: white;
+  display: none;
+  position: absolute;
+  padding: 5px 10px 5px 10px;
+  margin: 3px 0 0 0;
+}
+
+/* line 103, source/style.scss */
+#navigation li ul {
+  background: rgba(255, 255, 255, 0.9);
+  -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* CSS3 */
+/* line 104, source/style.scss */
+#navigation li ul li {
+  display: list-item;
+  color: #999;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* line 105, source/style.scss */
+#navigation li ul li a {
+  padding: 5px 5px 5px 20px;
+}
+
+/* line 106, source/style.scss */
+#navigation li.active {
+  color: white;
+  background: #73a8c0;
+}
+
+/* line 112, source/style.scss */
+#navigation .nav-account-edit a,
+#navigation .nav-account-view a,
+#navigation .nav-account-add a,
+#navigation .nav-tag-edit a,
+#navigation .nav-tag-view a,
+#navigation .nav-tag-add a {
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* line 114, source/style.scss */
+#navigation .nav-account-edit a,
+#navigation .nav-tag-edit a {
+  background-image: url(../_img/icons/pencil-small.png);
+}
+
+/* line 116, source/style.scss */
+#navigation .nav-account-view a,
+#navigation .nav-tag-view a {
+  background-image: url(../_img/icons/eye-small.png);
+}
+
+/* line 118, source/style.scss */
+#navigation .nav-account-add a,
+#navigation .nav-tag-add a {
+  background-image: url(../_img/icons/plus-small.png);
+}
+
+/* Sidebar */
+/* line 121, source/style.scss */
+#sidebar {
+  width: 200px;
+  float: left;
+  margin: 0 70px 0 0;
+  min-height: 10px;
+}
+
+/* line 122, source/style.scss */
+#sidebar h3 {
+  background-color: #f7f7f7;
+  display: block;
+  padding: 5px 0 5px 35px;
+}
+
+/* line 123, source/style.scss */
+#sidebar h3 .actions {
+  display: none;
+}
+
+/* line 124, source/style.scss */
+#sidebar h3 .actions {
+  float: right;
+  top: -20px;
+  right: 0;
+  background: #F7F7F7;
+  position: absolute;
+  padding-left: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 125, source/style.scss */
+#sidebar h3 a {
+  color: inherit;
+}
+
+/* line 126, source/style.scss */
+#sidebar .account {
+  margin: 0 0 30px 0;
+}
+
+/* line 127, source/style.scss */
+#sidebar .account:hover {
+  background-color: #f7f7f7;
+}
+
+/* line 128, source/style.scss */
+#sidebar .account:hover .actions {
+  display: block;
+}
+
+/* line 129, source/style.scss */
+#sidebar .account a:hover {
+  color: #73A8C0;
+}
+
+/* Tables */
+/* line 132, source/style.scss */
+.tableList > li {
+  border-bottom: 1px solid #ebebeb;
+  padding: 5px 3px 5px 3px;
+}
+
+/* line 133, source/style.scss */
+.tableList > li.subtitle {
+  border: none;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* line 134, source/style.scss */
+.tableList .amount {
+  float: right;
+}
+
+/* line 135, source/style.scss */
+.tableList .total {
+  font-weight: bold;
+  color: #666;
+}
+
+/* line 136, source/style.scss */
+.tableList tr:hover:not(.total):not(.removed) td {
+  background-color: #f7f7f7;
+}
+
+/* line 137, source/style.scss */
+.tableList tr:hover:not(.total):not(.removed) .actions {
+  display: table-cell;
+}
+
+/* line 138, source/style.scss */
+.tableList tr:hover:not(.total):not(.removed) .amount {
+  display: none;
+}
+
+/* line 139, source/style.scss */
+.tableList tr.removed {
+  opacity: .4;
+}
+
+/* line 140, source/style.scss */
+.tableList td {
+  border-bottom: 1px solid #ebebeb;
+  padding: 7px 5px 5px 5px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 141, source/style.scss */
+.tableList td.amount {
+  float: none;
+  text-align: right;
+}
+
+/* line 142, source/style.scss */
+.tableList tr[data-type="3"] td.amount {
+  color: #666;
+}
+
+/* line 143, source/style.scss */
+.tableList tr[data-type="2"] td.amount {
+  color: #30a168;
+}
+
+/* line 144, source/style.scss */
+.tableList tr[data-type="1"] td.amount {
+  color: #c63a3a;
+}
+
+/* line 145, source/style.scss */
+.tableList td.count {
+  font-size: 9px;
+  color: #999;
+  padding-left: 10px;
+}
+
+/* line 146, source/style.scss */
+.tableList td.date {
+  color: #999;
+  font-size: 10px;
+}
+
+/* line 147, source/style.scss */
+.tableList td.name span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* line 148, source/style.scss */
+.block .tableList td.name span {
+  width: 155px;
+}
+
+/* line 149, source/style.scss */
+.tableList .actions {
+  padding: 0;
+  display: none;
+  text-align: right;
+}
+
+/* line 150, source/style.scss */
+.tableList .actions span {
+  display: inline-block;
+  text-indent: -999px;
+  font-size: 0;
+  padding: 5px 0 0 0;
+  margin: 0;
+  height: 13px;
+  background-position: center center;
+}
+
+/* line 151, source/style.scss */
+.tableList .actions span + span {
+  margin-left: -3px;
+}
+
+/* line 152, source/style.scss */
+.tableList td h3 {
+  margin: 0;
+}
+
+/* line 153, source/style.scss */
+.tableList td.noData {
+  white-space: normal;
+  line-height: 15px;
+  border: none;
+  padding: 5px 5px 5px 25px;
+  background: url(../_img/icons/exclamation.png) no-repeat left center #f7f7f7;
+}
+
+/* line 155, source/style.scss */
+.cashFlow {
+  width: 100%;
+}
+
+/* line 156, source/style.scss */
+.cashFlow th[scope="rowgroup"] {
+  padding-top: 15px;
+}
+
+/* line 157, source/style.scss */
+.cashFlow td, .cashFlow th {
+  border-bottom: 1px solid #ebebeb;
+  padding: 7px 5px 5px 5px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 158, source/style.scss */
+.cashFlow tfoot td, .cashFlow tfoot th {
+  background-color: #f7f7f7;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* line 159, source/style.scss */
+.cashFlow td.amount, .cashFlow th[scope="row"] {
+  text-align: right;
+}
+
+/* line 160, source/style.scss */
+.cashFlow .partialTotalAmount td, .cashFlow .partialTotalAmount th {
+  padding-top: 20px;
+}
+
+/* line 161, source/style.scss */
+.cashFlow .actions {
+  padding: 0;
+  display: none;
+  text-align: right;
+}
+
+/* line 162, source/style.scss */
+.cashFlow .actions span {
+  display: inline-block;
+  text-indent: -999px;
+  font-size: 0;
+  padding: 5px 0 0 0;
+  margin: 0;
+  height: 13px;
+  background-position: center center;
+}
+
+/* line 163, source/style.scss */
+.cashFlow .actions span + span {
+  margin-left: -3px;
+}
+
+/* line 164, source/style.scss */
+.cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) td {
+  background-color: #f7f7f7;
+}
+
+/* line 165, source/style.scss */
+.cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) .actions {
+  display: table-cell;
+}
+
+/* line 166, source/style.scss */
+.cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) .amount {
+  display: none;
+}
+
+/* Actions & Icons */
+/* line 169, source/style.scss */
+.actions {
+  text-align: right;
+  min-height: 25px;
+}
+/* line 170, source/style.scss */
+.actions li {
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  padding: 5px 0;
+  margin: 5px 0 0 0;
+  display: block;
+  cursor: pointer;
+  float: left;
+  height: 100%;
+}
+/* line 171, source/style.scss */
+.actions a {
+  color: #999;
+  font-size: 10px;
+  font-weight: normal;
+}
+/* line 172, source/style.scss */
+.actions a:hover {
+  color: #73A8C0;
+}
+/* line 173, source/style.scss */
+.actions > span {
+  display: inline-block;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  cursor: pointer;
+  height: 20px;
+}
+/* line 174, source/style.scss */
+.actions > span a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 175, source/style.scss */
+.actions .addTrans {
+  background-image: url(../_img/icons/plus-button.png);
+  width: 128px;
+  float: right;
+}
+/* line 176, source/style.scss */
+.actions .editSmall {
+  background-image: url(../_img/icons/pencil-small.png);
+  width: 20px;
+}
+/* line 177, source/style.scss */
+.actions .removeSmall {
+  background-image: url(../_img/icons/cross-small.png);
+  width: 20px;
+}
+/* line 178, source/style.scss */
+.actions .viewAll {
+  background-image: url(../_img/icons/eye.png);
+}
+/* line 179, source/style.scss */
+.actions .viewSmall {
+  background-image: url(../_img/icons/eye.png);
+  width: 20px;
+}
+/* line 180, source/style.scss */
+.actions .goBack {
+  background-image: url(../_img/icons/arrow-curve-180-left.png);
+  float: right;
+}
+
+/* line 183, source/style.scss */
+h2 .actions {
+  line-height: 22px;
+}
+
+/* line 184, source/style.scss */
+h2 .actions > span {
+  padding-left: 22px;
+}
+
+/* line 186, source/style.scss */
+#monthBalance h3 {
+  background-image: url(../_img/icons/chart-up-color.png);
+}
+
+/* line 187, source/style.scss */
+#tagTransactions h3 {
+  background-image: url(../_img/icons/chart-up-color.png);
+}
+
+/* line 188, source/style.scss */
+#transactionsList h3 {
+  background-image: url(../_img/icons/eye.png);
+}
+
+/* line 189, source/style.scss */
+#lastTransactions h3 {
+  background-image: url(../_img/icons/points.png);
+}
+
+/* line 190, source/style.scss */
+#mostSpending h3 {
+  background-image: url(../_img/icons/smiley-cry.png);
+}
+
+/* line 191, source/style.scss */
+#cheaper h3 {
+  background-image: url(../_img/icons/smiley-grin.png);
+}
+
+/* line 192, source/style.scss */
+#myImportantTags h3 {
+  background-image: url(../_img/icons/tags-label.png);
+}
+
+/* line 193, source/style.scss */
+#allTags h3 {
+  background-image: url(../_img/icons/tags-label.png);
+}
+
+/* line 194, source/style.scss */
+#assetAllocation h3 {
+  background-image: url(../_img/icons/smiley-money.png);
+}
+
+/* line 195, source/style.scss */
+#accountList > h3 {
+  background-image: url(../_img/icons/zone-money.png);
+}
+
+/* line 196, source/style.scss */
+.transferTo {
+  background: url(../_img/icons/arrow.png) no-repeat left center;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+/* line 197, source/style.scss */
+.creditCard h3 {
+  background-image: url(../_img/icons/credit-card.png);
+  color: inherit!important;
+}
+
+/* line 198, source/style.scss */
+.checking h3 {
+  background-image: url(../_img/icons/money-coin.png);
+  color: inherit!important;
+}
+
+/* line 199, source/style.scss */
+.cash h3 {
+  background-image: url(../_img/icons/wallet.png);
+  color: inherit!important;
+}
+
+/* line 200, source/style.scss */
+.investment h3 {
+  background-image: url(../_img/icons/point.png);
+  color: inherit!important;
+}
+
+/* line 201, source/style.scss */
+.others h3 {
+  background-image: url(../_img/icons/money.png);
+  color: inherit!important;
+}
+
+/* line 203, source/style.scss */
+.creditCard {
+  color: #d98b26;
+}
+
+/* line 204, source/style.scss */
+.cash {
+  color: #5362d9;
+}
+
+/* line 205, source/style.scss */
+.investment {
+  color: #d9539b;
+}
+
+/* line 206, source/style.scss */
+.checking {
+  color: #25a19d;
+}
+
+/* line 207, source/style.scss */
+.amount.positive {
+  color: #30a168;
+}
+
+/* line 208, source/style.scss */
+.amount.negative {
+  color: #c63a3a;
+}
+
+/* line 209, source/style.scss */
+tr.toDo td.name {
+  background: url(../_img/icons/clock-small.png) no-repeat left center;
+  padding-left: 15px;
+}
+
+/* line 210, source/style.scss */
+.calendarIco {
+  background: url(../_img/icons/calendar-blue.png) no-repeat center center;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Blocks */
+/* line 213, source/style.scss */
+.blockDistance {
+  width: 40px;
+  display: block;
+  float: left;
+  height: 20px;
+}
+
+/* line 214, source/style.scss */
+.block {
+  margin: 0 0 40px 0;
+  width: 340px;
+  float: left;
+  position: relative;
+}
+
+/* line 215, source/style.scss */
+.block {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* CSS3 */
+/* line 216, source/style.scss */
+.block.double {
+  width: 100%;
+  float: none;
+}
+
+/* line 217, source/style.scss */
+.block h3 {
+  color: #73a8c0;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 23px;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+
+/* line 218, source/style.scss */
+.block h3 .actions {
+  float: right;
+}
+
+/* line 219, source/style.scss */
+.block h3 .actions span {
+  padding-left: 20px;
+  height: 15px;
+}
+
+/* line 220, source/style.scss */
+.block .tableList {
+  width: 100%;
+}
+
+/* line 221, source/style.scss */
+.block.expanded .balanceInTitle {
+  display: none;
+}
+
+/* line 222, source/style.scss */
+.block.collapsed {
+  background: url(../_img/bottomArrow.png) no-repeat 10px center #f7f7f7;
+  padding: 7px 0 7px 35px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* line 223, source/style.scss */
+.block.collapsed h3 {
+  margin-bottom: 0;
+}
+
+/* line 224, source/style.scss */
+.block.expanded .content {
+  margin-top: 20px;
+}
+
+/* line 226, source/style.scss */
+.block.collapsed .monthSelectInTitle,
+.block.collapsed .content {
+  display: none;
+}
+
+/* line 227, source/style.scss */
+.block.collapsed .balanceInTitle {
+  display: block;
+  float: right;
+  margin: 9px 5px 0 0;
+  color: #999;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 228, source/style.scss */
+.block.collapsed .balanceInTitle span {
+  padding-left: 20px;
+}
+
+/* line 229, source/style.scss */
+.block .monthSelectInTitle {
+  margin: 0 5px 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* line 230, source/style.scss */
+.noData {
+  white-space: normal;
+  line-height: 15px;
+  border: none;
+  padding: 5px 5px 5px 30px;
+  background: url(../_img/icons/exclamation.png) no-repeat 5px center #f7f7f7;
+}
+
+/* Graph */
+/* line 233, source/style.scss */
+.block .graph {
+  height: 240px;
+}
+
+/* line 234, source/style.scss */
+#monthBalanceGraph {
+  height: 250px;
+}
+
+/* DatePicker */
+/* line 238, source/style.scss */
+.calendar {
+  border: 1px solid #cdcdcd;
+  color: #666;
+  padding: 2px 0 2px 5px;
+  width: 105px;
+  background: url(../_img/backgrounds/datePickerInputBg.png) repeat-x right bottom;
+  cursor: pointer;
+}
+
+/* line 239, source/style.scss */
+.calendar {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS3 */
+/* line 240, source/style.scss */
+.ui-datepicker {
+  background: white;
+  padding: 10px;
+  display: none;
+  margin: 10px 0 0 0;
+}
+
+/* line 241, source/style.scss */
+.ui-datepicker {
+  background: rgba(255, 255, 255, 0.9);
+  -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* CSS3 */
+/* line 242, source/style.scss */
+.ui-datepicker .ui-datepicker-close {
+  margin: 10px 0 0 0;
+}
+
+/* line 243, source/style.scss */
+.ui-datepicker select:first-child {
+  margin-right: 10px;
+}
+
+/* line 247, source/style.scss */
+.ui-datepicker-current,
+.ui-datepicker-calendar,
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  display: none;
+}
+
+/* line 251, source/style.scss */
+.fullCalendar .ui-datepicker-current,
+.fullCalendar .ui-datepicker-calendar,
+.fullCalendar .ui-datepicker-prev,
+.fullCalendar .ui-datepicker-next {
+  display: block;
+}
+
+/* line 252, source/style.scss */
+.fullCalendar .ui-datepicker-prev {
+  float: left;
+  cursor: pointer;
+  background: url(../_img/icons/control-180.png) no-repeat center center;
+  width: 16px;
+  height: 16px;
+  text-indent: -999%;
+}
+
+/* line 253, source/style.scss */
+.fullCalendar .ui-datepicker-next {
+  float: right;
+  cursor: pointer;
+  background: url(../_img/icons/control.png) no-repeat center center;
+  width: 25px;
+  height: 16px;
+  text-indent: -999%;
+}
+
+/* line 254, source/style.scss */
+.fullCalendar .ui-datepicker-title {
+  float: left;
+  width: 155px;
+  text-align: center;
+  padding: 2px 0 0 0;
+}
+
+/* line 255, source/style.scss */
+.fullCalendar .ui-datepicker-calendar {
+  clear: both;
+  margin: 25px 0 0 0;
+}
+
+/* line 256, source/style.scss */
+.fullCalendar .ui-datepicker-week-end {
+  color: #999;
+}
+
+/* line 257, source/style.scss */
+.fullCalendar .ui-datepicker-calendar thead th {
+  width: 28px;
+  text-align: center;
+  font-size: 10px;
+  padding: 0 0 10px 0;
+}
+
+/* line 258, source/style.scss */
+.fullCalendar .ui-datepicker-calendar td {
+  text-align: center;
+  height: 18px;
+}
+
+/* line 259, source/style.scss */
+.fullCalendar .ui-datepicker-calendar td a {
+  padding: 1px 7px;
+  border: 1px solid transparent;
+}
+
+/* line 260, source/style.scss */
+.fullCalendar .ui-datepicker-calendar td a.ui-state-highlight {
+  background: #ffffdf;
+  border: 1px solid #ececb9;
+}
+
+/* line 262, source/style.scss */
+.fullCalendar .ui-datepicker-calendar td a:hover,
+.fullCalendar .ui-datepicker-calendar td a.ui-state-active {
+  background: #F7F7F7;
+  border: 1px solid #CCC;
+}
+
+/* Inputs */
+/* line 267, source/style.scss */
+.ui-datepicker .ui-datepicker-close,
+input[type=submit],
+.btnOk {
+  background: url(../_img/backgrounds/buttonOkBg.png) repeat-x left bottom;
+  border: 1px solid #9ce682;
+  color: #666;
+  font-size: 11px;
+  padding: 4px 5px;
+  cursor: pointer;
+  float: right;
+}
+
+/* line 268, source/style.scss */
+input[type=button]:active {
+  background-image: url(../_img/backgrounds/InputBgInv.png);
+  background-position: top left;
+}
+
+/* line 271, source/style.scss */
+.ui-datepicker .ui-datepicker-close:active,
+input[type=submit]:active,
+input[type=button].btnOk:active {
+  background-image: url(../_img/backgrounds/buttonOkBgInv.png);
+}
+
+/* line 274, source/style.scss */
+.ui-datepicker .ui-datepicker-close:focus,
+input[type=submit]:focus,
+input[type=button].btnOk:focus {
+  background-image: url(../_img/backgrounds/buttonOkBgInv.png);
+}
+
+/* line 275, source/style.scss */
+select, input {
+  -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+}
+
+/* CSS3 */
+/* line 276, source/style.scss */
+select, input {
+  border: none;
+  background: url(../_img/backgrounds/InputBg.png) repeat-x left bottom;
+  border: 1px solid #cdcdcd;
+  color: #999;
+  padding: 3px 5px;
+  font-size: 11px;
+  font-family: inherit;
+}
+
+/* line 277, source/style.scss */
+input {
+  padding: 4px 5px;
+}
+
+/* line 278, source/style.scss */
+select {
+  cursor: pointer;
+}
+
+/* line 279, source/style.scss */
+select:focus, input[type=text]:focus, input[type=password]:focus {
+  border: 1px solid #999;
+  background-image: url(../_img/backgrounds/InputBgInv.png);
+  background-position: top left;
+}
+
+/* line 280, source/style.scss */
+input[type=button] {
+  cursor: pointer;
+}
+
+/* Tags */
+/* line 283, source/style.scss */
+.tags {
+  color: #666;
+  font-size: 9px;
+}
+
+/* line 284, source/style.scss */
+.tags .tagged {
+  background: url(../_img/backgrounds/taggedBg.png) left center no-repeat;
+  padding: 4px 5px 6px 10px;
+  position: relative;
+  cursor: default;
+}
+
+/* line 285, source/style.scss */
+.tags .tagged span {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: url(../_img/backgrounds/taggedBg.png) no-repeat right center;
+}
+
+/* Blackout */
+/* line 288, source/style.scss */
+#blackout {
+  background: #73a8c0;
+  background: rgba(115, 168, 192, 0.6);
+}
+
+/* line 289, source/style.scss */
+.popUp {
+  background: white;
+  padding: 20px 25px;
+}
+
+/* line 290, source/style.scss */
+.popUp {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS3 */
+/* line 291, source/style.scss */
+.popUp h3 {
+  margin-bottom: 35px;
+}
+
+/* line 292, source/style.scss */
+.popUp .popClose {
+  background: url(../_img/icons/cross-circle.png) no-repeat center center;
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-indent: -999%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* line 293, source/style.scss */
+.popUp .fieldset {
+  margin: 25px 0 0 0;
+}
+
+/* line 294, source/style.scss */
+.popUp .message {
+  left: 20px;
+  right: 20px;
+  top: 40px;
+  position: absolute;
+}
+
+/* UI Autocomplete */
+/* line 297, source/style.scss */
+.ui-autocomplete {
+  position: absolute;
+  cursor: default;
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.9);
+  padding: 5px;
+}
+
+/* line 298, source/style.scss */
+.ui-autocomplete {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS 3 */
+/* line 299, source/style.scss */
+.ui-autocomplete li a {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* line 300, source/style.scss */
+.ui-autocomplete li a.ui-state-hover {
+  background: #F7F7F7;
+  border: 1px solid #CCC;
+}
+
+/* Form */
+/* line 304, source/style.scss */
+form fieldset:first-child,
+form fieldset:nth-of-type(1) {
+  margin-top: 0;
+}
+
+/* line 305, source/style.scss */
+form fieldset {
+  margin: 15px 0 0 0;
+}
+
+/* line 306, source/style.scss */
+form label {
+  width: 100px;
+  display: inline-block;
+  padding: 6px 0 0 0;
+}
+
+/* line 308, source/style.scss */
+form select + label,
+form input[type=password] + label {
+  margin-left: 40px;
+  margin-right: 10px;
+  width: auto;
+}
+
+/* line 309, source/style.scss */
+form .valid {
+  color: #999;
+  padding-left: 10px;
+}
+
+/* line 312, source/style.scss */
+form #accountName,
+form #tagName,
+form #profileName {
+  width: 190px;
+}
+
+/* line 313, source/style.scss */
+form #transDescription {
+  width: 290px;
+}
+
+/* line 314, source/style.scss */
+form #selectTags {
+  width: 290px;
+}
+
+/* line 316, source/style.scss */
+form #profilePassword,
+form #checkProfilePassword {
+  width: 80px;
+}
+
+/* line 317, source/style.scss */
+form #transAmount {
+  width: 90px;
+  text-align: right;
+}
+
+/* line 318, source/style.scss */
+form #profilePassword + label {
+  margin-left: 50px;
+}
+
+/* line 319, source/style.scss */
+form #initialBalance {
+  width: 70px;
+  text-align: right;
+}
+
+/* line 320, source/style.scss */
+form .fullCalendar {
+  width: 68px;
+}
+
+/* line 321, source/style.scss */
+form .fullCalendar + .calendarIco {
+  vertical-align: top;
+  opacity: .6;
+}
+
+/* line 322, source/style.scss */
+form .fullCalendar + .calendarIco:hover {
+  opacity: 1;
+}
+
+/* line 324, source/style.scss */
+form input + .exclamation,
+form select + .exclamation {
+  vertical-align: middle;
+  margin: 0 0 0 5px;
+}
+
+/* line 326, source/style.scss */
+form input.verify,
+form select.verify {
+  border: 1px solid #f2f180;
+}
+
+/* line 328, source/style.scss */
+.selectOptions {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 329, source/style.scss */
+.selectOptions > span {
+  opacity: .6;
+  display: block;
+  float: left;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  text-indent: -99999px;
+  border: 1px solid white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+/* line 330, source/style.scss */
+.selectOptions > span:hover {
+  opacity: 1;
+}
+
+/* line 331, source/style.scss */
+.selectOptions > span.selected {
+  background-color: #F7F7F7;
+  border: 1px solid #CCC;
+  opacity: 1;
+}
+
+/* line 332, source/style.scss */
+.selectOptions.transType > span[data-value="2"] {
+  background-image: url(../_img/icons/plus-octagon.png);
+}
+
+/* line 333, source/style.scss */
+.selectOptions.transType > span[data-value="1"] {
+  background-image: url(../_img/icons/minus-octagon.png);
+}
+
+/* line 334, source/style.scss */
+.selectOptions.transType > span[data-value="3"] {
+  background-image: url(../_img/icons/arrow-switch.png);
+}
+
+/* line 335, source/style.scss */
+.selectOptions.accountType > span[data-value="1"] {
+  background-image: url(../_img/icons/credit-card.png);
+}
+
+/* line 336, source/style.scss */
+.selectOptions.accountType > span[data-value="2"] {
+  background-image: url(../_img/icons/money-coin.png);
+}
+
+/* line 337, source/style.scss */
+.selectOptions.accountType > span[data-value="3"] {
+  background-image: url(../_img/icons/point.png);
+}
+
+/* line 338, source/style.scss */
+.selectOptions.accountType > span[data-value="4"] {
+  background-image: url(../_img/icons/wallet.png);
+}
+
+/* line 339, source/style.scss */
+.selectOptions.accountType > span[data-value="5"] {
+  background-image: url(../_img/icons/money.png);
+}
+
+/* Messages */
+/* line 342, source/style.scss */
+.message {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-bottom: 2px solid #999;
+  color: #999;
+  background: #f7f7f7;
+  margin: 0 0 10px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* line 343, source/style.scss */
+.message .wrap {
+  background-position: 40px center;
+  background-repeat: no-repeat;
+}
+
+/* line 344, source/style.scss */
+.message.error {
+  background-color: #f6e7e7;
+  border-color: #c63a3a;
+  color: #c63a3a;
+}
+
+/* line 345, source/style.scss */
+.message.success {
+  background-color: #e1f7e4;
+  border-color: #92b997;
+  color: #92b997;
+}
+
+/* line 346, source/style.scss */
+.message.success .wrap {
+  background-image: url(../_img/icons/tick.png);
+  padding-left: 65px;
+}
+
+/* line 347, source/style.scss */
+.message.alert {
+  background-color: #ffffdf;
+  border-color: #ececb9;
+  color: #cbcb8d;
+}
+
+/* line 348, source/style.scss */
+.message strong {
+  text-decoration: underline;
+}
+
+/* Other styles */
+/* line 351, source/style.scss */
+.footerInfo {
+  background: #F7F7F7;
+  text-align: right;
+  padding: 10px 5px;
+  margin: 10px 0 0 0;
+  clear: both;
+}
