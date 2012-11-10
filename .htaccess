@@ -1,0 +1,13 @@
+# Header
+#Header set Access-Control-Allow-Credentials true
+#Header set Strict-Action GET
+
+# Options
+Options +FollowSymLinks
+Options -Indexes
+
+# Conditions
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f 
+RewriteCond %{SCRIPT_FILENAME} !-d 
+RewriteBase /meutroco.com.br

@@ -1,0 +1,152 @@
+/*
+ * Meu Troco Website
+ * 
+ * @project		Meu Troco - Website
+ * @site		http://www.meutroco.com.br
+ * @version		1.0
+ * @package		layout
+ * @author		Rafael Heringer Carvalho
+ * @copyright	2011 Letsrider!
+ */
+ 
+/* BASIC DEF
+=============================*/
+html {margin:0; padding:0; height:100%;}
+body {margin:0; padding:0; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#999; background:url(../_img/site/bgPage.gif) no-repeat center center; height:100%;}
+.content {width:990px; margin:auto;}
+ul,
+li,
+ol {margin:0; padding:0; list-style-type:none;}
+a {color:#73a8c0; text-decoration:none;}
+a:hover {color:#e1a340;}
+h2 {margin:0; padding:0; color:#73a8c0; font-weight:bold; font-size:15px;}
+.clear {clear:both; display:block; height:1px;}
+
+/* @section		LAYOUT & STRUCTURE
+=============================*/
+/* Header */
+#header {background:url(../_img/site/bgHeader.gif) repeat-x left top; height:113px; clear:both; margin:0 0 15px 0;}
+#header h1 {margin:0; padding:0; width:332px; height:117px; background:url(../_img/site/bgLogo.png) no-repeat left top; float:left;}
+#header h1 a {background:url(../_img/site/meuTrocoLogo.png) no-repeat center center; text-indent:-999px; font-size:0; font-weight:0; width:332px; height:117px; display:block;}
+
+/* Footer */
+#footer {background:#b8d5e5; margin:30px 0 0 0;}
+#footer nav {padding:30px 0 0 0; margin:auto; width:665px; height:37px;}
+#footer nav li {float:left; display:block; background:url(../_img/site/bgNavFooter.png) no-repeat center top; height:37px; line-height:40px;}
+#footer nav li:first-child {background-position:left top;}
+#footer nav li:last-child {background-position:right top;}
+#footer nav a {color:#e1a340; font-weight:bold; font-size:13px; padding:0 33px; display:block;}
+#footer nav a:hover {color:#73A8C0;}
+
+/* Navigation */
+#navigation {width:390px; font-size:15px; border-top:1px solid #d7e5ec; border-bottom:1px solid #d7e5ec; float:left; margin:21px 0 0 20px;}
+#navigation li {float:left; border-top:1px solid #d7e5ec; border-bottom:1px solid #d7e5ec; margin:1px 0 1px 0; width:130px; height:20px;}
+#navigation li.active a {font-weight:bold; color:#e1a340;}
+#navigation li.inactive a {color:#CCC; cursor:default; text-decoration:line-through;}
+#navigation a {padding:0 0 0 5px; display:block;}
+
+/* User login */
+#userArea {float:right; width:208px; height:68px; background:url(../_img/site/bgUserArea.png) no-repeat left top; margin:10px 0 0 0; padding:4px 11px 0 11px;}
+#userArea label {width:55px; height:20px; display:block; float:left; text-indent:-999px; font-size:0; font-weight:0;}
+#userArea label[for="login"] {background:url(../_img/site/labelEmail.png) no-repeat left top;}
+#userArea label[for="password"] {background:url(../_img/site/labelPass.png) no-repeat left top;}
+#userArea input[type="text"],
+#userArea input[type="password"] {width:127px;}
+#userArea .fieldset {margin:0 0 5px 0; position:relative;}
+#userArea input[type="submit"] {position:absolute; right:0; top:0;}
+
+/* Forms */
+.fieldset {border:3px solid #cde2ed; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+input[type="text"],
+input[type="password"] {border:none; height:20px; line-height:20px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#666; padding:0 10px;}
+input[type="submit"] {text-indent:-999px; font-size:0; font-weight:0; width:31px; height:20px; background:url(../_img/site/inputOk.png) no-repeat left top; border:none; cursor:pointer;}
+input[type="submit"]:hover,
+input[type="submit"]:focus {background-position:-31px top;}
+input[type="submit"]:active {background-position:-62px top;}
+
+/* Buttons */
+.actions {display:block; margin:10px 0 0 0;}
+.btn {text-indent:-999%; font-size:0; line-height:0; display:block; float:right;}
+.btn.viewAll {width:82px; height:29px; background:url(../_img/site/btnViewAll.png) no-repeat left top;}
+.btnOk {background:url(../_img/backgrounds/buttonOkBg.png) repeat-x left bottom; border:1px solid #9ce682; color:#666; font-size:11px; padding:4px 5px; cursor:pointer; float:right;}
+.btnOk:active {background-image:url(../_img/backgrounds/buttonOkBgInv.png);}
+
+/* Columns */
+.column {width:455px; float:left; margin:0 66px 0 0;}
+.column.right {margin-right:7px;}
+.column.left {margin-left:7px;}
+
+/* Article */
+article {position:relative;}
+article + article {margin:30px 0 0 0;}
+article time {width:48px; height:62px; background:url(../_img/site/bgDate.png) no-repeat left top; display:block; position:absolute; left:0; top:0;}
+article time span {color:#b8d5e5; text-align:center; font-weight:bold; font-size:15px; display:block; height:30px; line-height:32px;}
+article .entry {margin:0 0 0 62px;}
+article .entry p {margin:0;}
+article .entry p + p {margin:10px 0 0 0;}
+
+/* Content Box */
+.contentBox header {border-bottom:1px solid #d7e5ec; margin:0 0 10px 0;}
+.contentBox header h2 {border-bottom:1px solid #d7e5ec; margin:0 0 2px 0; padding:2px 32px 5px 32px;}
+.column.right .contentBox header h2 {text-align:right;}
+.contentBox ul li {border-bottom:1px solid #ececec; padding:7px 0 7px 0; position:relative;}
+.contentBox ul li:hover {background-color:#ececec;}
+.contentBox ul li p {margin:0;}
+.contentBox ul li a.viewDetails {display:block; position:absolute; left:0; top:0; width:100%; height:100%; text-align:right; line-height:24px; vertical-align:middle;}
+
+/* Bug Tracker */
+#bugTracker header h2 {background:url(../_img/site/icoBug.png) no-repeat left top;}
+#bugTracker ul {margin:-5px 0 0 0;}
+#bugTracker ul li {padding-left:20px;}
+#bugTracker ul li.completed {background-image:url(../_img/site/icoAccepted.png); background-repeat:no-repeat; background-position:left center;}
+#bugTracker ul li.reverted,
+#bugTracker ul li.modified,
+#bugTracker ul li.accepted {background-image:url(../_img/site/icoWaiting.png); background-repeat:no-repeat; background-position:left center;}
+#bugTracker ul li.created,
+#bugTracker ul li.rejected {background-image:url(../_img/site/icoRejected.png); background-repeat:no-repeat; background-position:left center;}
+
+/* Author Notes */
+#authorNotes header h2 {background:url(../_img/site/icoNotes.png) no-repeat right top;}
+
+/* Features Banner */
+#featuresBanner {width:990px; height:250px; background:url(../_img/site/bgFeaturesBanner.png) no-repeat left top; position:relative; margin:0 0 20px 2px;}
+.nivo-controlNav {position:absolute; bottom:22px; right:20px;}
+.nivo-controlNav a {width:28px; height:27px; background:url(../_img/site/bgPagination.png) no-repeat left top; line-height:27px; text-align:center; float:left; font-weight:bold; display:block;}
+.nivo-controlNav a:hover {background-position:-30px top;}
+.nivo-controlNav a.active {background-position:-58px top; color:white;}
+.nivo-directionNav {display:none!important;}
+
+/* Blackout */
+#blackout {background:#73a8c0; background:rgba(255,255,255,.6);}
+.popUp {background:white; padding:20px 25px;}
+.popUp .content {width:auto;}
+.popUp {-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -moz-box-shadow:0 0 15px rgba(0,0,0,.3); -webkit-box-shadow:0 0 15px rgba(0,0,0,.3); box-shadow:0 0 15px rgba(0,0,0,.3);} /* CSS3 */
+.popUp h3 {margin-bottom:35px;}
+.popUp .popClose {background:url(../_img/icons/cross-circle.png) no-repeat center center; display:block; width:16px; height:16px; text-indent:-999%; position:absolute; right:10px; top:10px;}
+.popUp .fieldset {margin:25px 0 0 0; border:none;}
+.popUp {width:200px;}
+
+/* Loading */
+#contentLoading {width:100%; height:325px; background:url(../_img/loading.gif) no-repeat center center; text-align:center;}
+#contentLoading p {padding:29% 0 0 0;}
+.popUp .loading {width:100%; height:110px; background:url(../_img/loading.gif) no-repeat center center; text-align:center;}
+.popUp .loading p {padding:95px 0 0 0;}
+
+
+/* JQUERY PLUGINS
+=============================*/
+/* Nivo Slider */
+.nivoSlider {position:relative; }
+.nivoSlider img {position:absolute; top:0px; left:0px;}
+.nivoSlider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:6; display:none;}
+.nivo-slice {display:block; position:absolute; z-index:5; height:100%;}
+.nivo-box {display:block; position:absolute; z-index:5;}
+.nivo-caption {position:absolute; left:0px; bottom:0px; background:#000; color:#fff; opacity:0.8; width:100%; z-index:8;}
+.nivo-caption p {padding:5px; margin:0;}
+.nivo-caption a {display:inline !important;}
+.nivo-html-caption {display:none; }
+.nivo-directionNav a {position:absolute; top:45%; z-index:9; cursor:pointer;}
+.nivo-prevNav {left:0px;}
+.nivo-nextNav {right:0px;}
+.nivo-controlNav a {position:relative; z-index:9; cursor:pointer;}
+.nivo-controlNav a.active {font-weight:bold;}
