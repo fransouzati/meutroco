@@ -55,7 +55,7 @@ API (Não incluso no GIT, projeto privado)
 +	Toda e qualquer ação, verificar a sessão de login e permissão do usuário
 +	Criar uma lógica melhor para TOKEN
 
-### Métodos de Requisições ### ###
+### Métodos de Requisições ###
 +	Usaremos métodos de requisições HTTP para as ações da API. 
 +	As requisições, basicamente, são:
 	+	GET: Carregar, retornar
