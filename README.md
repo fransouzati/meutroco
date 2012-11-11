@@ -16,6 +16,7 @@ SEGURANÇA:
 +	Nas ações da API, verificar o tempo de expiração do token.
 +	Nas ações da API, verificar se o token está associado ao APIKEY da aplicação.
 +	Enviar informacoes de login/senha para a pagina login/index.php. Nesta página, criptografar a senha; Mascarar a API_KEY com uma máscara única (criptografar). Essa máscara terá uma parte "random", de apr. 7 caracteres. Essa mascara será cadastrada no BD e NUNCA mais poderá ser usada.  Assim evita que alguém copie a API_KEY e use  como um outro aplicativo.
++	Criptografar a senha também na página de edição do perfil.
 
 TOKEN:
 +	Gerar token quando o usuário logar-se. Assim não vai ser preciso cookie e session.
