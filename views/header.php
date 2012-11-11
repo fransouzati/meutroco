@@ -52,8 +52,13 @@
 	<h1 id="logo"><a href="<?php echo siteInfo::url() ?>" title="Meu Troco :: Protegendo o seu dinheiro"><img src="../_img/logo.png" alt="Meu Troco" /></a></h1>
 	<div id="userArea">
 		<div class="avatar">
-			<img src="<?php echo User::userInfo('photoUrl') ?>" width="55" height="55" />
-			<span class="avatarEffect"></span>
+			<?php if(User::userInfo('photoUrl') != ""): ?>
+				<img src="<?php echo User::userInfo('photoUrl'); ?>" alt="" width="55" />
+			<?php elseif(User::userInfo('gender') == "male"): ?>
+				<img src="<?php echo siteInfo::url(); ?>/_img/blankAvatar.jpg" alt="" width="55" />
+			<?php else: ?>
+				<img src="<?php echo siteInfo::url(); ?>/_img/blankAvatarFemale.jpg" alt="" width="55" />
+			<?php endif; ?>
 		</div>
 		<p class="welcome">Bem vindo, <?php echo User::userInfo('firstName') ?>!</p>
 		<p class="logInfo">Entrou a <span id="loggedTime">00 min</span></p>

@@ -33,9 +33,16 @@
 		<input type="password" name="newPassword" id="newProfilePassword" />
 	</fieldset>
 </form>
+
 <div class="changePhoto">
-	<img src="" alt="" width="100" />
-	<a href="javascript:;" id="changeProfilePhoto">Alterar foto</a>
+	<?php if($user->photoUrl != ""): ?>
+		<img src="<?php echo $user->photoUrl; ?>" alt="" width="100" />
+	<?php elseif($user->gender == "male"): ?>
+		<img src="<?php echo siteInfo::url(); ?>/_img/blankAvatar.jpg" alt="" width="100" />
+	<?php else: ?>
+		<img src="<?php echo siteInfo::url(); ?>/_img/blankAvatarFemale.jpg" alt="" width="100" />
+	<?php endif; ?>
+	<?php /*<a href="javascript:;" id="changeProfilePhoto">Alterar foto</a>*/ ?>
 </div>
 
 <span class="clear"></span>

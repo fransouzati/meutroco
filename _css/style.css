@@ -357,29 +357,18 @@ h3 {
 }
 
 /* line 82, source/style.scss */
-#userArea .avatar .avatarEffect {
-  width: 55px;
-  height: 55px;
-  display: block;
-  background: url(../_img/avatarEffect.png) no-repeat left top;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* line 83, source/style.scss */
 #userArea .welcome {
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 3px;
 }
 
-/* line 84, source/style.scss */
+/* line 83, source/style.scss */
 #userArea .logInfo {
   margin-bottom: 5px;
 }
 
-/* line 85, source/style.scss */
+/* line 84, source/style.scss */
 #userArea .btnExit {
   float: right;
   width: 39px;
@@ -391,18 +380,18 @@ h3 {
   font-weight: 0;
 }
 
-/* line 87, source/style.scss */
+/* line 86, source/style.scss */
 #userArea .btnExit:hover,
 #userArea .btnExit:focus {
   background-position: -39px top;
 }
 
-/* line 88, source/style.scss */
+/* line 87, source/style.scss */
 #userArea .btnExit:active {
   background-position: -78px top;
 }
 
-/* line 89, source/style.scss */
+/* line 88, source/style.scss */
 #userArea .myProfileLink {
   font-weight: bold;
   display: block;
@@ -411,17 +400,17 @@ h3 {
 }
 
 /* Navigation */
-/* line 92, source/style.scss */
+/* line 91, source/style.scss */
 #navigation {
   margin-bottom: 30px;
 }
 
-/* line 93, source/style.scss */
+/* line 92, source/style.scss */
 #navigation ul {
   display: inline-block;
 }
 
-/* line 94, source/style.scss */
+/* line 93, source/style.scss */
 #navigation li {
   font-weight: bold;
   color: #73a8c0;
@@ -429,7 +418,7 @@ h3 {
   margin: 0 25px 0 0;
 }
 
-/* line 95, source/style.scss */
+/* line 94, source/style.scss */
 #navigation li {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -437,12 +426,12 @@ h3 {
 }
 
 /* CSS3 */
-/* line 96, source/style.scss */
+/* line 95, source/style.scss */
 #navigation li:hover {
   background: #dfebf0;
 }
 
-/* line 97, source/style.scss */
+/* line 96, source/style.scss */
 #navigation li a {
   text-decoration: none;
   color: inherit;
@@ -450,7 +439,7 @@ h3 {
   display: block;
 }
 
-/* line 98, source/style.scss */
+/* line 97, source/style.scss */
 #navigation li ul {
   background: white;
   display: none;
@@ -459,7 +448,7 @@ h3 {
   margin: 3px 0 0 0;
 }
 
-/* line 99, source/style.scss */
+/* line 98, source/style.scss */
 #navigation li ul {
   background: rgba(255, 255, 255, 0.9);
   -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
@@ -471,7 +460,7 @@ h3 {
 }
 
 /* CSS3 */
-/* line 100, source/style.scss */
+/* line 99, source/style.scss */
 #navigation li ul li {
   display: list-item;
   color: #999;
@@ -479,18 +468,18 @@ h3 {
   margin: 0;
 }
 
-/* line 101, source/style.scss */
+/* line 100, source/style.scss */
 #navigation li ul li a {
   padding: 5px 5px 5px 20px;
 }
 
-/* line 102, source/style.scss */
+/* line 101, source/style.scss */
 #navigation li.active {
   color: white;
   background: #73a8c0;
 }
 
-/* line 108, source/style.scss */
+/* line 107, source/style.scss */
 #navigation .nav-account-edit a,
 #navigation .nav-account-view a,
 #navigation .nav-account-add a,
@@ -501,26 +490,26 @@ h3 {
   background-position: left center;
 }
 
-/* line 110, source/style.scss */
+/* line 109, source/style.scss */
 #navigation .nav-account-edit a,
 #navigation .nav-tag-edit a {
   background-image: url(../_img/icons/pencil-small.png);
 }
 
-/* line 112, source/style.scss */
+/* line 111, source/style.scss */
 #navigation .nav-account-view a,
 #navigation .nav-tag-view a {
   background-image: url(../_img/icons/eye-small.png);
 }
 
-/* line 114, source/style.scss */
+/* line 113, source/style.scss */
 #navigation .nav-account-add a,
 #navigation .nav-tag-add a {
   background-image: url(../_img/icons/plus-small.png);
 }
 
 /* Sidebar */
-/* line 117, source/style.scss */
+/* line 116, source/style.scss */
 #sidebar {
   width: 200px;
   float: left;
@@ -528,19 +517,19 @@ h3 {
   min-height: 10px;
 }
 
-/* line 118, source/style.scss */
+/* line 117, source/style.scss */
 #sidebar h3 {
   background-color: #f7f7f7;
   display: block;
   padding: 5px 0 5px 35px;
 }
 
-/* line 119, source/style.scss */
+/* line 118, source/style.scss */
 #sidebar h3 .actions {
   display: none;
 }
 
-/* line 120, source/style.scss */
+/* line 119, source/style.scss */
 #sidebar h3 .actions {
   float: right;
   top: -20px;
@@ -551,77 +540,77 @@ h3 {
   border-radius: 5px 5px 0 0;
 }
 
-/* line 121, source/style.scss */
+/* line 120, source/style.scss */
 #sidebar h3 a {
   color: inherit;
 }
 
-/* line 122, source/style.scss */
+/* line 121, source/style.scss */
 #sidebar .account {
   margin: 0 0 30px 0;
 }
 
-/* line 123, source/style.scss */
+/* line 122, source/style.scss */
 #sidebar .account:hover {
   background-color: #f7f7f7;
 }
 
-/* line 124, source/style.scss */
+/* line 123, source/style.scss */
 #sidebar .account:hover .actions {
   display: block;
 }
 
-/* line 125, source/style.scss */
+/* line 124, source/style.scss */
 #sidebar .account a:hover {
   color: #73A8C0;
 }
 
 /* Tables */
-/* line 128, source/style.scss */
+/* line 127, source/style.scss */
 .tableList > li {
   border-bottom: 1px solid #ebebeb;
   padding: 5px 3px 5px 3px;
 }
 
-/* line 129, source/style.scss */
+/* line 128, source/style.scss */
 .tableList > li.subtitle {
   border: none;
   font-weight: bold;
   padding-top: 10px;
 }
 
-/* line 130, source/style.scss */
+/* line 129, source/style.scss */
 .tableList .amount {
   float: right;
 }
 
-/* line 131, source/style.scss */
+/* line 130, source/style.scss */
 .tableList .total {
   font-weight: bold;
   color: #666;
 }
 
-/* line 132, source/style.scss */
+/* line 131, source/style.scss */
 .tableList tr:hover:not(.total):not(.removed) td {
   background-color: #f7f7f7;
 }
 
-/* line 133, source/style.scss */
+/* line 132, source/style.scss */
 .tableList tr:hover:not(.total):not(.removed) .actions {
   display: table-cell;
 }
 
-/* line 134, source/style.scss */
+/* line 133, source/style.scss */
 .tableList tr:hover:not(.total):not(.removed) .amount {
   display: none;
 }
 
-/* line 135, source/style.scss */
+/* line 134, source/style.scss */
 .tableList tr.removed {
   opacity: .4;
 }
 
-/* line 136, source/style.scss */
+/* line 135, source/style.scss */
 .tableList td {
   border-bottom: 1px solid #ebebeb;
   padding: 7px 5px 5px 5px;
@@ -629,41 +618,41 @@ h3 {
   white-space: nowrap;
 }
 
-/* line 137, source/style.scss */
+/* line 136, source/style.scss */
 .tableList td.amount {
   float: none;
   text-align: right;
 }
 
-/* line 138, source/style.scss */
+/* line 137, source/style.scss */
 .tableList tr[data-type="3"] td.amount {
   color: #666;
 }
 
-/* line 139, source/style.scss */
+/* line 138, source/style.scss */
 .tableList tr[data-type="2"] td.amount {
   color: #30a168;
 }
 
-/* line 140, source/style.scss */
+/* line 139, source/style.scss */
 .tableList tr[data-type="1"] td.amount {
   color: #c63a3a;
 }
 
-/* line 141, source/style.scss */
+/* line 140, source/style.scss */
 .tableList td.count {
   font-size: 9px;
   color: #999;
   padding-left: 10px;
 }
 
-/* line 142, source/style.scss */
+/* line 141, source/style.scss */
 .tableList td.date {
   color: #999;
   font-size: 10px;
 }
 
-/* line 143, source/style.scss */
+/* line 142, source/style.scss */
 .tableList td.name span {
   display: block;
   overflow: hidden;
@@ -671,19 +660,19 @@ h3 {
   text-overflow: ellipsis;
 }
 
-/* line 144, source/style.scss */
+/* line 143, source/style.scss */
 .block .tableList td.name span {
   width: 155px;
 }
 
-/* line 145, source/style.scss */
+/* line 144, source/style.scss */
 .tableList .actions {
   padding: 0;
   display: none;
   text-align: right;
 }
 
-/* line 146, source/style.scss */
+/* line 145, source/style.scss */
 .tableList .actions span {
   display: inline-block;
   text-indent: -999px;
@@ -694,17 +683,17 @@ h3 {
   background-position: center center;
 }
 
-/* line 147, source/style.scss */
+/* line 146, source/style.scss */
 .tableList .actions span + span {
   margin-left: -3px;
 }
 
-/* line 148, source/style.scss */
+/* line 147, source/style.scss */
 .tableList td h3 {
   margin: 0;
 }
 
-/* line 149, source/style.scss */
+/* line 148, source/style.scss */
 .tableList td.noData {
   white-space: normal;
   line-height: 15px;
@@ -713,17 +702,17 @@ h3 {
   background: url(../_img/icons/exclamation.png) no-repeat left center #f7f7f7;
 }
 
-/* line 151, source/style.scss */
+/* line 150, source/style.scss */
 .cashFlow {
   width: 100%;
 }
 
-/* line 152, source/style.scss */
+/* line 151, source/style.scss */
 .cashFlow th[scope="rowgroup"] {
   padding-top: 15px;
 }
 
-/* line 153, source/style.scss */
+/* line 152, source/style.scss */
 .cashFlow td, .cashFlow th {
   border-bottom: 1px solid #ebebeb;
   padding: 7px 5px 5px 5px;
@@ -731,31 +720,31 @@ h3 {
   white-space: nowrap;
 }
 
-/* line 154, source/style.scss */
+/* line 153, source/style.scss */
 .cashFlow tfoot td, .cashFlow tfoot th {
   background-color: #f7f7f7;
   font-size: 13px;
   font-weight: bold;
 }
 
-/* line 155, source/style.scss */
+/* line 154, source/style.scss */
 .cashFlow td.amount, .cashFlow th[scope="row"] {
   text-align: right;
 }
 
-/* line 156, source/style.scss */
+/* line 155, source/style.scss */
 .cashFlow .partialTotalAmount td, .cashFlow .partialTotalAmount th {
   padding-top: 20px;
 }
 
-/* line 157, source/style.scss */
+/* line 156, source/style.scss */
 .cashFlow .actions {
   padding: 0;
   display: none;
   text-align: right;
 }
 
-/* line 158, source/style.scss */
+/* line 157, source/style.scss */
 .cashFlow .actions span {
   display: inline-block;
   text-indent: -999px;
@@ -766,33 +755,33 @@ h3 {
   background-position: center center;
 }
 
-/* line 159, source/style.scss */
+/* line 158, source/style.scss */
 .cashFlow .actions span + span {
   margin-left: -3px;
 }
 
-/* line 160, source/style.scss */
+/* line 159, source/style.scss */
 .cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) td {
   background-color: #f7f7f7;
 }
 
-/* line 161, source/style.scss */
+/* line 160, source/style.scss */
 .cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) .actions {
   display: table-cell;
 }
 
-/* line 162, source/style.scss */
+/* line 161, source/style.scss */
 .cashFlow tbody tr:hover:not(.total):not(.partialTotalAmount):not(.removed) .amount {
   display: none;
 }
 
 /* Actions & Icons */
-/* line 165, source/style.scss */
+/* line 164, source/style.scss */
 .actions {
   text-align: right;
   min-height: 25px;
 }
-/* line 166, source/style.scss */
+/* line 165, source/style.scss */
 .actions li {
   background-repeat: no-repeat;
   background-position: 0 center;
@@ -803,17 +792,17 @@ h3 {
   float: left;
   height: 100%;
 }
-/* line 167, source/style.scss */
+/* line 166, source/style.scss */
 .actions a {
   color: #999;
   font-size: 10px;
   font-weight: normal;
 }
-/* line 168, source/style.scss */
+/* line 167, source/style.scss */
 .actions a:hover {
   color: #73A8C0;
 }
-/* line 169, source/style.scss */
+/* line 168, source/style.scss */
 .actions > span {
   display: inline-block;
   cursor: pointer;
@@ -822,104 +811,104 @@ h3 {
   cursor: pointer;
   height: 20px;
 }
-/* line 170, source/style.scss */
+/* line 169, source/style.scss */
 .actions > span a {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 171, source/style.scss */
+/* line 170, source/style.scss */
 .actions .addTrans {
   background-image: url(../_img/icons/plus-button.png);
   width: 128px;
   float: right;
 }
-/* line 172, source/style.scss */
+/* line 171, source/style.scss */
 .actions .editSmall {
   background-image: url(../_img/icons/pencil-small.png);
   width: 20px;
 }
-/* line 173, source/style.scss */
+/* line 172, source/style.scss */
 .actions .removeSmall {
   background-image: url(../_img/icons/cross-small.png);
   width: 20px;
 }
-/* line 174, source/style.scss */
+/* line 173, source/style.scss */
 .actions .viewAll {
   background-image: url(../_img/icons/eye.png);
 }
-/* line 175, source/style.scss */
+/* line 174, source/style.scss */
 .actions .viewSmall {
   background-image: url(../_img/icons/eye.png);
   width: 20px;
 }
-/* line 176, source/style.scss */
+/* line 175, source/style.scss */
 .actions .goBack {
   background-image: url(../_img/icons/arrow-curve-180-left.png);
   float: right;
 }
 
-/* line 179, source/style.scss */
+/* line 178, source/style.scss */
 h2 .actions {
   line-height: 22px;
 }
 
-/* line 180, source/style.scss */
+/* line 179, source/style.scss */
 h2 .actions > span {
   padding-left: 22px;
 }
 
-/* line 182, source/style.scss */
+/* line 181, source/style.scss */
 #monthBalance h3 {
   background-image: url(../_img/icons/chart-up-color.png);
 }
 
-/* line 183, source/style.scss */
+/* line 182, source/style.scss */
 #tagTransactions h3 {
   background-image: url(../_img/icons/chart-up-color.png);
 }
 
-/* line 184, source/style.scss */
+/* line 183, source/style.scss */
 #transactionsList h3 {
   background-image: url(../_img/icons/eye.png);
 }
 
-/* line 185, source/style.scss */
+/* line 184, source/style.scss */
 #lastTransactions h3 {
   background-image: url(../_img/icons/points.png);
 }
 
-/* line 186, source/style.scss */
+/* line 185, source/style.scss */
 #mostSpending h3 {
   background-image: url(../_img/icons/smiley-cry.png);
 }
 
-/* line 187, source/style.scss */
+/* line 186, source/style.scss */
 #cheaper h3 {
   background-image: url(../_img/icons/smiley-grin.png);
 }
 
-/* line 188, source/style.scss */
+/* line 187, source/style.scss */
 #myImportantTags h3 {
   background-image: url(../_img/icons/tags-label.png);
 }
 
-/* line 189, source/style.scss */
+/* line 188, source/style.scss */
 #allTags h3 {
   background-image: url(../_img/icons/tags-label.png);
 }
 
-/* line 190, source/style.scss */
+/* line 189, source/style.scss */
 #assetAllocation h3 {
   background-image: url(../_img/icons/smiley-money.png);
 }
 
-/* line 191, source/style.scss */
+/* line 190, source/style.scss */
 #accountList > h3 {
   background-image: url(../_img/icons/zone-money.png);
 }
 
-/* line 192, source/style.scss */
+/* line 191, source/style.scss */
 .transferTo {
   background: url(../_img/icons/arrow.png) no-repeat left center;
   display: inline-block;
@@ -929,73 +918,73 @@ h2 .actions > span {
   margin: 0 10px;
 }
 
-/* line 193, source/style.scss */
+/* line 192, source/style.scss */
 .creditCard h3 {
   background-image: url(../_img/icons/credit-card.png);
   color: inherit!important;
 }
 
-/* line 194, source/style.scss */
+/* line 193, source/style.scss */
 .checking h3 {
   background-image: url(../_img/icons/money-coin.png);
   color: inherit!important;
 }
 
-/* line 195, source/style.scss */
+/* line 194, source/style.scss */
 .cash h3 {
   background-image: url(../_img/icons/wallet.png);
   color: inherit!important;
 }
 
-/* line 196, source/style.scss */
+/* line 195, source/style.scss */
 .investment h3 {
   background-image: url(../_img/icons/point.png);
   color: inherit!important;
 }
 
-/* line 197, source/style.scss */
+/* line 196, source/style.scss */
 .others h3 {
   background-image: url(../_img/icons/money.png);
   color: inherit!important;
 }
 
-/* line 199, source/style.scss */
+/* line 198, source/style.scss */
 .creditCard {
   color: #d98b26;
 }
 
-/* line 200, source/style.scss */
+/* line 199, source/style.scss */
 .cash {
   color: #5362d9;
 }
 
-/* line 201, source/style.scss */
+/* line 200, source/style.scss */
 .investment {
   color: #d9539b;
 }
 
-/* line 202, source/style.scss */
+/* line 201, source/style.scss */
 .checking {
   color: #25a19d;
 }
 
-/* line 203, source/style.scss */
+/* line 202, source/style.scss */
 .amount.positive {
   color: #30a168;
 }
 
-/* line 204, source/style.scss */
+/* line 203, source/style.scss */
 .amount.negative {
   color: #c63a3a;
 }
 
-/* line 205, source/style.scss */
+/* line 204, source/style.scss */
 tr.toDo td.name {
   background: url(../_img/icons/clock-small.png) no-repeat left center;
   padding-left: 15px;
 }
 
-/* line 206, source/style.scss */
+/* line 205, source/style.scss */
 .calendarIco {
   background: url(../_img/icons/calendar-blue.png) no-repeat center center;
   width: 25px;
@@ -1005,7 +994,7 @@ tr.toDo td.name {
 }
 
 /* Blocks */
-/* line 209, source/style.scss */
+/* line 208, source/style.scss */
 .blockDistance {
   width: 40px;
   display: block;
@@ -1013,7 +1002,7 @@ tr.toDo td.name {
   height: 20px;
 }
 
-/* line 210, source/style.scss */
+/* line 209, source/style.scss */
 .block {
   margin: 0 0 40px 0;
   width: 340px;
@@ -1023,35 +1012,35 @@ tr.toDo td.name {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 212, source/style.scss */
+/* line 211, source/style.scss */
 .block.double {
   width: 100%;
   float: none;
 }
-/* line 213, source/style.scss */
+/* line 212, source/style.scss */
 .block.expanded .balanceInTitle {
   display: none;
 }
-/* line 214, source/style.scss */
+/* line 213, source/style.scss */
 .block.collapsed {
   background: url(../_img/bottomArrow.png) no-repeat 10px center #f7f7f7;
   padding: 7px 0 7px 35px;
   cursor: pointer;
   margin-bottom: 20px;
 }
-/* line 215, source/style.scss */
+/* line 214, source/style.scss */
 .block.collapsed h3 {
   margin-bottom: 0;
 }
-/* line 216, source/style.scss */
+/* line 215, source/style.scss */
 .block.expanded .content {
   margin-top: 20px;
 }
-/* line 218, source/style.scss */
+/* line 217, source/style.scss */
 .block.collapsed .monthSelectInTitle, .block.collapsed .content {
   display: none;
 }
-/* line 219, source/style.scss */
+/* line 218, source/style.scss */
 .block.collapsed .balanceInTitle {
   display: block;
   float: right;
@@ -1062,11 +1051,11 @@ tr.toDo td.name {
   top: 0;
   right: 0;
 }
-/* line 220, source/style.scss */
+/* line 219, source/style.scss */
 .block.collapsed .balanceInTitle span {
   padding-left: 20px;
 }
-/* line 221, source/style.scss */
+/* line 220, source/style.scss */
 .block h3 {
   color: #73a8c0;
   margin: 0 0 20px 0;
@@ -1074,28 +1063,28 @@ tr.toDo td.name {
   background-position: 0 center;
   background-repeat: no-repeat;
 }
-/* line 222, source/style.scss */
+/* line 221, source/style.scss */
 .block h3 .actions {
   float: right;
 }
-/* line 223, source/style.scss */
+/* line 222, source/style.scss */
 .block h3 .actions span {
   padding-left: 20px;
   height: 15px;
 }
-/* line 224, source/style.scss */
+/* line 223, source/style.scss */
 .block .monthSelectInTitle {
   margin: 0 5px 0 0;
   position: absolute;
   top: 0;
   right: 0;
 }
-/* line 225, source/style.scss */
+/* line 224, source/style.scss */
 .block .tableList {
   width: 100%;
 }
 
-/* line 228, source/style.scss */
+/* line 227, source/style.scss */
 .noData {
   white-space: normal;
   line-height: 15px;
@@ -1105,18 +1094,18 @@ tr.toDo td.name {
 }
 
 /* Graph */
-/* line 231, source/style.scss */
+/* line 230, source/style.scss */
 .block .graph {
   height: 240px;
 }
 
-/* line 232, source/style.scss */
+/* line 231, source/style.scss */
 #monthBalanceGraph {
   height: 250px;
 }
 
 /* DatePicker */
-/* line 236, source/style.scss */
+/* line 235, source/style.scss */
 .calendar {
   border: 1px solid #cdcdcd;
   color: #666;
@@ -1126,7 +1115,7 @@ tr.toDo td.name {
   cursor: pointer;
 }
 
-/* line 237, source/style.scss */
+/* line 236, source/style.scss */
 .calendar {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1137,7 +1126,7 @@ tr.toDo td.name {
 }
 
 /* CSS3 */
-/* line 238, source/style.scss */
+/* line 237, source/style.scss */
 .ui-datepicker {
   background: white;
   padding: 10px;
@@ -1145,7 +1134,7 @@ tr.toDo td.name {
   margin: 10px 0 0 0;
 }
 
-/* line 239, source/style.scss */
+/* line 238, source/style.scss */
 .ui-datepicker {
   background: rgba(255, 255, 255, 0.9);
   -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
@@ -1157,17 +1146,17 @@ tr.toDo td.name {
 }
 
 /* CSS3 */
-/* line 240, source/style.scss */
+/* line 239, source/style.scss */
 .ui-datepicker .ui-datepicker-close {
   margin: 10px 0 0 0;
 }
 
-/* line 241, source/style.scss */
+/* line 240, source/style.scss */
 .ui-datepicker select:first-child {
   margin-right: 10px;
 }
 
-/* line 245, source/style.scss */
+/* line 244, source/style.scss */
 .ui-datepicker-current,
 .ui-datepicker-calendar,
 .ui-datepicker-prev,
@@ -1175,14 +1164,14 @@ tr.toDo td.name {
   display: none;
 }
 
-/* line 250, source/style.scss */
+/* line 249, source/style.scss */
 .fullCalendar .ui-datepicker-current,
 .fullCalendar .ui-datepicker-calendar,
 .fullCalendar .ui-datepicker-prev,
 .fullCalendar .ui-datepicker-next {
   display: block;
 }
-/* line 251, source/style.scss */
+/* line 250, source/style.scss */
 .fullCalendar .ui-datepicker-prev {
   float: left;
   cursor: pointer;
@@ -1191,7 +1180,7 @@ tr.toDo td.name {
   height: 16px;
   text-indent: -999%;
 }
-/* line 252, source/style.scss */
+/* line 251, source/style.scss */
 .fullCalendar .ui-datepicker-next {
   float: right;
   cursor: pointer;
@@ -1200,45 +1189,45 @@ tr.toDo td.name {
   height: 16px;
   text-indent: -999%;
 }
-/* line 253, source/style.scss */
+/* line 252, source/style.scss */
 .fullCalendar .ui-datepicker-title {
   float: left;
   width: 155px;
   text-align: center;
   padding: 2px 0 0 0;
 }
-/* line 254, source/style.scss */
+/* line 253, source/style.scss */
 .fullCalendar .ui-datepicker-calendar {
   clear: both;
   margin: 25px 0 0 0;
 }
-/* line 255, source/style.scss */
+/* line 254, source/style.scss */
 .fullCalendar .ui-datepicker-week-end {
   color: #999;
 }
-/* line 256, source/style.scss */
+/* line 255, source/style.scss */
 .fullCalendar .ui-datepicker-calendar thead th {
   width: 28px;
   text-align: center;
   font-size: 10px;
   padding: 0 0 10px 0;
 }
-/* line 257, source/style.scss */
+/* line 256, source/style.scss */
 .fullCalendar .ui-datepicker-calendar td {
   text-align: center;
   height: 18px;
 }
-/* line 258, source/style.scss */
+/* line 257, source/style.scss */
 .fullCalendar .ui-datepicker-calendar td a {
   padding: 1px 7px;
   border: 1px solid transparent;
 }
-/* line 259, source/style.scss */
+/* line 258, source/style.scss */
 .fullCalendar .ui-datepicker-calendar td a.ui-state-highlight {
   background: #ffffdf;
   border: 1px solid #ececb9;
 }
-/* line 261, source/style.scss */
+/* line 260, source/style.scss */
 .fullCalendar .ui-datepicker-calendar td a:hover,
 .fullCalendar .ui-datepicker-calendar td a.ui-state-active {
   background: #F7F7F7;
@@ -1246,7 +1235,7 @@ tr.toDo td.name {
 }
 
 /* Inputs */
-/* line 268, source/style.scss */
+/* line 267, source/style.scss */
 .ui-datepicker .ui-datepicker-close,
 input[type=submit],
 .btnOk {
@@ -1259,27 +1248,27 @@ input[type=submit],
   float: right;
 }
 
-/* line 269, source/style.scss */
+/* line 268, source/style.scss */
 input[type=button]:active {
   background-image: url(../_img/backgrounds/InputBgInv.png);
   background-position: top left;
 }
 
-/* line 272, source/style.scss */
+/* line 271, source/style.scss */
 .ui-datepicker .ui-datepicker-close:active,
 input[type=submit]:active,
 input[type=button].btnOk:active {
   background-image: url(../_img/backgrounds/buttonOkBgInv.png);
 }
 
-/* line 275, source/style.scss */
+/* line 274, source/style.scss */
 .ui-datepicker .ui-datepicker-close:focus,
 input[type=submit]:focus,
 input[type=button].btnOk:focus {
   background-image: url(../_img/backgrounds/buttonOkBgInv.png);
 }
 
-/* line 276, source/style.scss */
+/* line 275, source/style.scss */
 select, input {
   -moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
@@ -1287,7 +1276,7 @@ select, input {
 }
 
 /* CSS3 */
-/* line 277, source/style.scss */
+/* line 276, source/style.scss */
 select, input {
   border: none;
   background: url(../_img/backgrounds/InputBg.png) repeat-x left bottom;
@@ -1298,36 +1287,36 @@ select, input {
   font-family: inherit;
 }
 
-/* line 278, source/style.scss */
+/* line 277, source/style.scss */
 input {
   padding: 4px 5px;
 }
 
-/* line 279, source/style.scss */
+/* line 278, source/style.scss */
 select {
   cursor: pointer;
 }
 
-/* line 280, source/style.scss */
+/* line 279, source/style.scss */
 select:focus, input[type=text]:focus, input[type=password]:focus {
   border: 1px solid #999;
   background-image: url(../_img/backgrounds/InputBgInv.png);
   background-position: top left;
 }
 
-/* line 281, source/style.scss */
+/* line 280, source/style.scss */
 input[type=button] {
   cursor: pointer;
 }
 
 /* Tags */
-/* line 284, source/style.scss */
+/* line 283, source/style.scss */
 .tags {
   color: #666;
   font-size: 9px;
 }
 
-/* line 285, source/style.scss */
+/* line 284, source/style.scss */
 .tags .tagged {
   background: url(../_img/backgrounds/taggedBg.png) left center no-repeat;
   padding: 4px 5px 6px 10px;
@@ -1335,7 +1324,7 @@ input[type=button] {
   cursor: default;
 }
 
-/* line 286, source/style.scss */
+/* line 285, source/style.scss */
 .tags .tagged span {
   display: block;
   position: absolute;
@@ -1347,19 +1336,19 @@ input[type=button] {
 }
 
 /* Blackout */
-/* line 289, source/style.scss */
+/* line 288, source/style.scss */
 .blackout {
   background: #73a8c0;
   background: rgba(115, 168, 192, 0.6);
 }
 
-/* line 290, source/style.scss */
+/* line 289, source/style.scss */
 .popUp {
   background: white;
   padding: 20px 25px;
 }
 
-/* line 291, source/style.scss */
+/* line 290, source/style.scss */
 .popUp {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1370,12 +1359,12 @@ input[type=button] {
 }
 
 /* CSS3 */
-/* line 292, source/style.scss */
+/* line 291, source/style.scss */
 .popUp h3 {
   margin-bottom: 35px;
 }
 
-/* line 293, source/style.scss */
+/* line 292, source/style.scss */
 .popClose {
   background: url(../_img/icons/cross-circle.png) no-repeat center center;
   display: block;
@@ -1387,12 +1376,12 @@ input[type=button] {
   top: 10px;
 }
 
-/* line 294, source/style.scss */
+/* line 293, source/style.scss */
 .popUp .fieldset {
   margin: 25px 0 0 0;
 }
 
-/* line 295, source/style.scss */
+/* line 294, source/style.scss */
 .popUp .message {
   left: 20px;
   right: 20px;
@@ -1401,7 +1390,7 @@ input[type=button] {
 }
 
 /* NewPage */
-/* line 298, source/style.scss */
+/* line 297, source/style.scss */
 .newPageBlackout #popUp {
   background: rgba(255, 255, 255, 0.9);
   left: auto!important;
@@ -1417,10 +1406,10 @@ input[type=button] {
 }
 
 /* Photo edit */
-/* line 303, source/style.scss */
+/* line 302, source/style.scss */
 .changePhoto {
   background: #f7f7f7;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #cdcdcd;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1429,14 +1418,14 @@ input[type=button] {
   border-radius: 5px;
   text-align: center;
 }
-/* line 307, source/style.scss */
+/* line 306, source/style.scss */
 .changePhoto a {
   font-weight: bold;
   display: block;
 }
 
 /* UI Autocomplete */
-/* line 311, source/style.scss */
+/* line 310, source/style.scss */
 .ui-autocomplete {
   position: absolute;
   cursor: default;
@@ -1451,35 +1440,35 @@ input[type=button] {
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
-/* line 315, source/style.scss */
+/* line 314, source/style.scss */
 .ui-autocomplete li a {
   display: block;
   padding: 5px;
   cursor: pointer;
 }
-/* line 316, source/style.scss */
+/* line 315, source/style.scss */
 .ui-autocomplete li a.ui-state-hover {
   background: #F7F7F7;
   border: 1px solid #CCC;
 }
 
 /* Form */
-/* line 322, source/style.scss */
+/* line 321, source/style.scss */
 form fieldset:first-child,
 form fieldset:nth-of-type(1) {
   margin-top: 0;
 }
-/* line 323, source/style.scss */
+/* line 322, source/style.scss */
 form fieldset {
   margin: 15px 0 0 0;
 }
-/* line 324, source/style.scss */
+/* line 323, source/style.scss */
 form label {
   width: 100px;
   display: inline-block;
   padding: 6px 0 0 0;
 }
-/* line 328, source/style.scss */
+/* line 327, source/style.scss */
 form select + label,
 form input[type=password] + label,
 form select + .exclamation + label,
@@ -1488,73 +1477,73 @@ form input[type=password] + .exclamation + label {
   margin-right: 10px;
   width: auto;
 }
-/* line 329, source/style.scss */
+/* line 328, source/style.scss */
 form .valid {
   color: #999;
   padding-left: 10px;
 }
-/* line 332, source/style.scss */
+/* line 331, source/style.scss */
 form #accountName,
 form #tagName,
 form #profileName {
   width: 190px;
 }
-/* line 333, source/style.scss */
+/* line 332, source/style.scss */
 form #transDescription {
   width: 290px;
 }
-/* line 334, source/style.scss */
+/* line 333, source/style.scss */
 form #selectTags {
   width: 290px;
 }
-/* line 337, source/style.scss */
+/* line 336, source/style.scss */
 form #profilePassword,
 form #newProfilePassword,
 form #checkProfilePassword {
   width: 80px;
 }
-/* line 338, source/style.scss */
+/* line 337, source/style.scss */
 form #transAmount {
   width: 90px;
   text-align: right;
 }
-/* line 339, source/style.scss */
+/* line 338, source/style.scss */
 form #initialBalance {
   width: 70px;
   text-align: right;
 }
-/* line 340, source/style.scss */
+/* line 339, source/style.scss */
 form .fullCalendar {
   width: 68px;
 }
-/* line 341, source/style.scss */
+/* line 340, source/style.scss */
 form .fullCalendar + .calendarIco {
   vertical-align: top;
   opacity: .6;
 }
-/* line 342, source/style.scss */
+/* line 341, source/style.scss */
 form .fullCalendar + .calendarIco:hover {
   opacity: 1;
 }
-/* line 344, source/style.scss */
+/* line 343, source/style.scss */
 form input + .exclamation,
 form select + .exclamation {
   vertical-align: middle;
   margin: 5px 0 0 5px;
   position: absolute;
 }
-/* line 346, source/style.scss */
+/* line 345, source/style.scss */
 form input.verify,
 form select.verify {
   border: 1px solid #f2f180;
 }
 
-/* line 349, source/style.scss */
+/* line 348, source/style.scss */
 .selectOptions {
   display: inline-block;
   vertical-align: top;
 }
-/* line 350, source/style.scss */
+/* line 349, source/style.scss */
 .selectOptions > span {
   opacity: .6;
   display: block;
@@ -1568,51 +1557,51 @@ form select.verify {
   background-repeat: no-repeat;
   margin-right: 10px;
 }
-/* line 351, source/style.scss */
+/* line 350, source/style.scss */
 .selectOptions > span:hover {
   opacity: 1;
 }
-/* line 352, source/style.scss */
+/* line 351, source/style.scss */
 .selectOptions > span.selected {
   background-color: #F7F7F7;
   border: 1px solid #CCC;
   opacity: 1;
 }
-/* line 354, source/style.scss */
+/* line 353, source/style.scss */
 .selectOptions.transType > span[data-value="2"] {
   background-image: url(../_img/icons/plus-octagon.png);
 }
-/* line 355, source/style.scss */
+/* line 354, source/style.scss */
 .selectOptions.transType > span[data-value="1"] {
   background-image: url(../_img/icons/minus-octagon.png);
 }
-/* line 356, source/style.scss */
+/* line 355, source/style.scss */
 .selectOptions.transType > span[data-value="3"] {
   background-image: url(../_img/icons/arrow-switch.png);
 }
-/* line 359, source/style.scss */
+/* line 358, source/style.scss */
 .selectOptions.accountType > span[data-value="1"] {
   background-image: url(../_img/icons/credit-card.png);
 }
-/* line 360, source/style.scss */
+/* line 359, source/style.scss */
 .selectOptions.accountType > span[data-value="2"] {
   background-image: url(../_img/icons/money-coin.png);
 }
-/* line 361, source/style.scss */
+/* line 360, source/style.scss */
 .selectOptions.accountType > span[data-value="3"] {
   background-image: url(../_img/icons/point.png);
 }
-/* line 362, source/style.scss */
+/* line 361, source/style.scss */
 .selectOptions.accountType > span[data-value="4"] {
   background-image: url(../_img/icons/wallet.png);
 }
-/* line 363, source/style.scss */
+/* line 362, source/style.scss */
 .selectOptions.accountType > span[data-value="5"] {
   background-image: url(../_img/icons/money.png);
 }
 
 /* Messages */
-/* line 368, source/style.scss */
+/* line 367, source/style.scss */
 .message {
   font-weight: bold;
   padding: 5px 10px;
@@ -1626,41 +1615,41 @@ form select.verify {
   right: 0;
   z-index: 10;
 }
-/* line 370, source/style.scss */
+/* line 369, source/style.scss */
 .message.success {
   background-color: #e1f7e4;
   border-color: #92b997;
   color: #92b997;
 }
-/* line 372, source/style.scss */
+/* line 371, source/style.scss */
 .message.success .wrap {
   background-image: url(../_img/icons/tick.png);
   padding-left: 65px;
 }
-/* line 374, source/style.scss */
+/* line 373, source/style.scss */
 .message.alert {
   background-color: #ffffdf;
   border-color: #ececb9;
   color: #cbcb8d;
 }
-/* line 375, source/style.scss */
+/* line 374, source/style.scss */
 .message.error {
   background-color: #f6e7e7;
   border-color: #c63a3a;
   color: #c63a3a;
 }
-/* line 376, source/style.scss */
+/* line 375, source/style.scss */
 .message .wrap {
   background-position: 40px center;
   background-repeat: no-repeat;
 }
-/* line 377, source/style.scss */
+/* line 376, source/style.scss */
 .message strong {
   text-decoration: underline;
 }
 
 /* Other styles */
-/* line 381, source/style.scss */
+/* line 380, source/style.scss */
 .footerInfo {
   background: #F7F7F7;
   text-align: right;
@@ -1671,31 +1660,31 @@ form select.verify {
 
 /* @section For page styles
 ===========================*/
-/* line 386, source/style.scss */
+/* line 385, source/style.scss */
 .myProfile form {
   float: left;
   margin-bottom: 25px;
   width: 431px;
 }
-/* line 387, source/style.scss */
+/* line 386, source/style.scss */
 .myProfile .changePhoto {
   float: left;
   margin-left: 25px;
 }
-/* line 388, source/style.scss */
+/* line 387, source/style.scss */
 .myProfile .fullCalendar {
   margin-right: 43px;
 }
-/* line 389, source/style.scss */
+/* line 388, source/style.scss */
 .myProfile .fieldset {
   width: 431px;
 }
-/* line 391, source/style.scss */
+/* line 390, source/style.scss */
 .myProfile .fieldset input {
   float: right;
   margin-left: 15px;
 }
-/* line 393, source/style.scss */
+/* line 392, source/style.scss */
 .myProfile label[for="profileGender"] {
   width: 41px;
 }
