@@ -1,5 +1,5 @@
-meutroco
-========
+Meu Troco
+=========
 Projeto meutroco open-source - Gerenciador financeiro pessoal. Ainda não conhece? Leia em: <http://www.rafaheringer.com.br/meu-troco-gestao-financeira-pessoal/>
 
 Próximos passos
