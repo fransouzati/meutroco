@@ -25,6 +25,9 @@
 						/* Ok */
 						GLOBAL_MESSAGE = {type:'success', message: 'O seu perfil foi alterado com sucesso.'};
 						jQuery().blackout({action:'close'});
+						setTimeout(function(){
+							window.location.reload();
+						}, 1000);
 					}
 				});
 			}
