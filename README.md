@@ -1,16 +1,9 @@
 meutroco
 ========
-Projeto meutroco open-source - Gerenciador financeiro pessoal
-
-Buglist
--------
-
-
+Projeto meutroco open-source - Gerenciador financeiro pessoal. Ainda não conhece? Leia em: <http://www.rafaheringer.com.br/meu-troco-gestao-financeira-pessoal/>
 
 Próximos passos
 ---------------
-TRANSAÇÕES:
-+	Ao editar ou criar uma transação, fazer funcionar o esquema de auto-suggest de TAGS.
 
 SEGURANÇA:
 +	Nas ações da API, verificar o tempo de expiração do token.
@@ -34,7 +27,6 @@ LOGIN:
 
 DESIGN:
 +	Fazer a landing-page do site
-+	-Fazer a página inicial do meutroco, "Você ainda não criou uma conta"
 
 Contas:
 +	Ao criar uma conta do tipo Cartão de Crédito, dar a opção do usuário setar a data de vencimento do cartão. Ao inserir uma transação no cartão, dar a opção de escolher em qual mês será o vencimento.
