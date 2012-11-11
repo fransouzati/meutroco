@@ -56,7 +56,8 @@
 			<span class="avatarEffect"></span>
 		</div>
 		<p class="welcome">Bem vindo, <?php echo User::userInfo('firstName') ?>!</p>
-		<p class="logInfo">Entrou em <span id="loggedTime">00 min</span></p>
+		<p class="logInfo">Entrou a <span id="loggedTime">00 min</span></p>
+		<a href="#meuPerfil" class="myProfileLink">Meu perfil</a>
 		<a href="<?php echo siteInfo::apiUrl() ?>/<?php echo User::userInfo('id') ?>/logout/token=<?php echo User::token() ?>&api_key=<?php echo siteInfo::apiKey() ?>" class="btnExit" title="Sair do Meu Troco">Logout</a>
 	</div>
 </header>

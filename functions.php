@@ -268,5 +268,10 @@ class API extends User {
 	public function getAccountBalance($account = "", $month = "", $year = "", $orderby = "account", $order = ""){
 		return json_decode(file_get_contents(API_PATH.'/'.User::userInfo('id').'/accounts/balance/token='.$this->token().'&account='.$account.'&month='.$month.'&year='.$year.'&orderBy='.$orderby.'&order='.$order));
 	}
+
+	//Retorna as informações do usuário
+	public function getProfileInfo(){
+		return json_decode(file_get_contents(API_PATH.'/user/token='.$this->token()));
+	}
 }
 ?>

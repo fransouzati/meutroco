@@ -9,17 +9,11 @@
  * @copyright	2011 Letsrider!
  */
 
+@import "compass/reset";
+@import "compass/css3";
+
 /* ERIC'S MEYER RESET
 =============================*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,
-address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,
-var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;}
-:focus{outline:0;}body{line-height:1;color:black;background:white;}
-ol,ul{list-style:none;}table{border-collapse:separate;border-spacing:0;}
-caption,th,td{text-align:left;}
-blockquote:before,blockquote:after,q:before,q:after{content:"";}
-blockquote,q{quotes:"" "";}
-input {font-family:inherit; font-size:inherit;}
 article, aside, dialog, figure, footer, header, nav, section {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;display:block;}
 a {text-decoration:none; color:#73a8c0;}
 button::-moz-focus-inner, input::-moz-focus-inner {border: 0;}
@@ -40,10 +34,11 @@ body::-webkit-scrollbar-thumb:vertical {height:50px; background-color: rgba(115,
 body::-webkit-scrollbar-thumb:vertical:hover {background-color: rgba(115,168,192,.6);}
 
 /* Titles */
+h1, h2, h3, h4, h5, h6 {font-weight: bold;}
 h2 {font-family:Sketch, Verdana; margin:0 0 35px 0;  font-size:16px; color:#73a8c0;}
 h3 {font-size:12px; margin:0 0 5px 0; background-position:10px center; background-repeat:no-repeat; position:relative;}
 
-/* @section		LAYOUT & STRUCTURE
+/* @section LAYOUT & STRUCTURE
 =============================*/
 /* Others */
 .wrap,
@@ -91,6 +86,7 @@ h3 {font-size:12px; margin:0 0 5px 0; background-position:10px center; backgroun
 #userArea .btnExit:hover,
 #userArea .btnExit:focus {background-position:-39px top;}
 #userArea .btnExit:active {background-position:-78px top;}
+#userArea .myProfileLink {font-weight: bold; display: block; float: left; padding-top: 5px;}
 
 /* Navigation */
 #navigation {margin-bottom:30px;}
@@ -211,22 +207,24 @@ tr.toDo td.name {background:url(../_img/icons/clock-small.png) no-repeat left ce
 
 /* Blocks */
 .blockDistance {width:40px; display:block; float:left; height:20px;}
-.block {margin:0 0 40px 0; width:340px; float:left; position:relative;}
-.block {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;} /* CSS3 */
-.block.double {width:100%; float:none;}
-.block h3 {color:#73a8c0; margin:0 0 20px 0; padding:2px 0 2px 23px; background-position:0 center; background-repeat:no-repeat;}
-.block h3 .actions {float:right;}
-.block h3 .actions span {padding-left:20px; height:15px;}
-.block .tableList {width:100%;}
-.block.expanded .balanceInTitle {display:none;}
-.block.collapsed {background:url(../_img/bottomArrow.png) no-repeat 10px center #f7f7f7; padding:7px 0 7px 35px; cursor:pointer; margin-bottom:20px;}
-.block.collapsed h3 {margin-bottom:0;}
-.block.expanded .content {margin-top:20px;}
-.block.collapsed .monthSelectInTitle,
-.block.collapsed .content {display:none;}
-.block.collapsed .balanceInTitle {display:block; float:right; margin:9px 5px 0 0; color:#999; font-weight:bold; position:absolute; top:0; right:0;}
-.block.collapsed .balanceInTitle span {padding-left:20px;}
-.block .monthSelectInTitle {margin:0 5px 0 0; position:absolute; top:0; right:0;}
+.block {
+	margin:0 0 40px 0; width:340px; float:left; position:relative;-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;
+	&.double {width:100%; float:none;}
+	&.expanded .balanceInTitle {display:none;}
+	&.collapsed {background:url(../_img/bottomArrow.png) no-repeat 10px center #f7f7f7; padding:7px 0 7px 35px; cursor:pointer; margin-bottom:20px;}
+	&.collapsed h3 {margin-bottom:0;}
+	&.expanded .content {margin-top:20px;}
+	&.collapsed .monthSelectInTitle,
+	&.collapsed .content {display:none;}
+	&.collapsed .balanceInTitle {display:block; float:right; margin:9px 5px 0 0; color:#999; font-weight:bold; position:absolute; top:0; right:0;}
+	&.collapsed .balanceInTitle span {padding-left:20px;}
+	h3 {color:#73a8c0; margin:0 0 20px 0; padding:2px 0 2px 23px; background-position:0 center; background-repeat:no-repeat;}
+	h3 .actions {float:right;}
+	h3 .actions span {padding-left:20px; height:15px;}
+	.monthSelectInTitle {margin:0 5px 0 0; position:absolute; top:0; right:0;}
+	.tableList {width:100%;}
+}
+
 .noData {white-space:normal; line-height:15px; border:none; padding:5px 5px 5px 30px; background:url(../_img/icons/exclamation.png) no-repeat 5px center #F7F7F7;}
 
 /* Graph */
@@ -245,21 +243,24 @@ tr.toDo td.name {background:url(../_img/icons/clock-small.png) no-repeat left ce
 .ui-datepicker-calendar,
 .ui-datepicker-prev,
 .ui-datepicker-next {display: none;}
-.fullCalendar .ui-datepicker-current,
-.fullCalendar .ui-datepicker-calendar,
-.fullCalendar .ui-datepicker-prev,
-.fullCalendar .ui-datepicker-next {display:block;}
-.fullCalendar .ui-datepicker-prev {float:left; cursor:pointer; background:url(../_img/icons/control-180.png) no-repeat center center; width:16px; height:16px; text-indent:-999%;}
-.fullCalendar .ui-datepicker-next {float:right; cursor:pointer; background:url(../_img/icons/control.png) no-repeat center center; width:25px; height:16px; text-indent:-999%;}
-.fullCalendar .ui-datepicker-title {float:left; width:155px; text-align:center; padding:2px 0 0 0;}
-.fullCalendar .ui-datepicker-calendar {clear:both; margin:25px 0 0 0;}
-.fullCalendar .ui-datepicker-week-end {color:#999;}
-.fullCalendar .ui-datepicker-calendar thead th {width:28px; text-align:center; font-size:10px; padding:0 0 10px 0;}
-.fullCalendar .ui-datepicker-calendar td {text-align:center; height:18px;}
-.fullCalendar .ui-datepicker-calendar td a {padding:1px 7px; border:1px solid transparent;}
-.fullCalendar .ui-datepicker-calendar td a.ui-state-highlight {background:#ffffdf; border:1px solid #ececb9;}
-.fullCalendar .ui-datepicker-calendar td a:hover,
-.fullCalendar .ui-datepicker-calendar td a.ui-state-active {background:#F7F7F7; border:1px solid #CCC;}
+.fullCalendar {
+	.ui-datepicker-current,
+	.ui-datepicker-calendar,
+	.ui-datepicker-prev,
+	.ui-datepicker-next {display:block;}
+	.ui-datepicker-prev {float:left; cursor:pointer; background:url(../_img/icons/control-180.png) no-repeat center center; width:16px; height:16px; text-indent:-999%;}
+	.ui-datepicker-next {float:right; cursor:pointer; background:url(../_img/icons/control.png) no-repeat center center; width:25px; height:16px; text-indent:-999%;}
+	.ui-datepicker-title {float:left; width:155px; text-align:center; padding:2px 0 0 0;}
+	.ui-datepicker-calendar {clear:both; margin:25px 0 0 0;}
+	.ui-datepicker-week-end {color:#999;}
+	.ui-datepicker-calendar thead th {width:28px; text-align:center; font-size:10px; padding:0 0 10px 0;}
+	.ui-datepicker-calendar td {text-align:center; height:18px;}
+	.ui-datepicker-calendar td a {padding:1px 7px; border:1px solid transparent;}
+	.ui-datepicker-calendar td a.ui-state-highlight {background:#ffffdf; border:1px solid #ececb9;}
+	.ui-datepicker-calendar td a:hover,
+	.ui-datepicker-calendar td a.ui-state-active {background:#F7F7F7; border:1px solid #CCC;}	
+}
+
 
 /* Inputs */
 .ui-datepicker .ui-datepicker-close,
@@ -285,68 +286,109 @@ input[type=button] {cursor:pointer;}
 .tags .tagged span {display:block; position:absolute; right:0; top:0; height:100%; width:5px; background:url(../_img/backgrounds/taggedBg.png) no-repeat right center;}
 
 /* Blackout */
-#blackout {background:#73a8c0; background:rgba(115,168,192,.6);}
+.blackout {background:#73a8c0; background:rgba(115,168,192,.6);}
 .popUp {background:white; padding:20px 25px;}
 .popUp {-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -moz-box-shadow:0 0 15px rgba(0,0,0,.3); -webkit-box-shadow:0 0 15px rgba(0,0,0,.3); box-shadow:0 0 15px rgba(0,0,0,.3);} /* CSS3 */
 .popUp h3 {margin-bottom:35px;}
-.popUp .popClose {background:url(../_img/icons/cross-circle.png) no-repeat center center; display:block; width:16px; height:16px; text-indent:-999%; position:absolute; right:10px; top:10px;}
+.popClose {background:url(../_img/icons/cross-circle.png) no-repeat center center; display:block; width:16px; height:16px; text-indent:-999%; position:absolute; right:10px; top:10px;}
 .popUp .fieldset {margin:25px 0 0 0;}
 .popUp .message {left:20px; right:20px; top:40px; position:absolute;}
 
+/* NewPage */
+.newPageBlackout #popUp {
+	background: rgba(255,255,255,0.9); left:auto!important; bottom:0; right: 0!important; top:0!important; @include box-shadow(0px 0px 10px rgba(0,0,0,0.5)); margin: 0!important; padding: 15px; width: 645px!important;
+}
+
+/* Photo edit */
+.changePhoto {
+	background: #f7f7f7; padding: 20px; border: 1px solid #cdcdcd;
+	@include border-radius(5px); 
+	text-align: center;
+	a {font-weight: bold; display: block;}
+}
+
 /* UI Autocomplete */
-.ui-autocomplete {position:absolute; cursor: default; background:none repeat scroll 0 0 rgba(255, 255, 255, 0.9); padding:5px;}
-.ui-autocomplete {-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -moz-box-shadow:0 0 3px rgba(0,0,0,.1); -webkit-box-shadow:0 0 3px rgba(0,0,0,.1); box-shadow:0 0 3px rgba(0,0,0,.1);} /* CSS 3 */
-.ui-autocomplete li a {display:block; padding:5px; cursor:pointer;}
-.ui-autocomplete li a.ui-state-hover {background:#F7F7F7; border:1px solid #CCC;}
+.ui-autocomplete {
+	position:absolute; cursor: default; background:none repeat scroll 0 0 rgba(255, 255, 255, 0.9); padding:5px; 
+	@include border-radius(5px);
+	@include box-shadow(0 0 3px rgba(0,0,0,.1));
+	li a {display:block; padding:5px; cursor:pointer;}
+	li a.ui-state-hover {background:#F7F7F7; border:1px solid #CCC;}
+}
 
 /* Form */
-form fieldset:first-child,
-form fieldset:nth-of-type(1) {margin-top:0;}
-form fieldset {margin:15px 0 0 0;}
-form label {width:100px; display:inline-block; padding:6px 0 0 0;}
-form select + label,
-form input[type=password] + label {margin-left:40px; margin-right:10px; width:auto;}
-form .valid {color:#999; padding-left:10px;}
-form #accountName,
-form #tagName,
-form #profileName {width:190px;}
-form #transDescription {width:290px;}
-form #selectTags {width:290px;}
-form #profilePassword,
-form #checkProfilePassword {width:80px;}
-form #transAmount {width:90px; text-align:right;}
-form #profilePassword + label {margin-left:50px;}
-form #initialBalance {width:70px; text-align:right;}
-form .fullCalendar {width:68px;}
-form .fullCalendar + .calendarIco {vertical-align:top; opacity:.6;}
-form .fullCalendar + .calendarIco:hover {opacity:1;}
-form input + .exclamation,
-form select + .exclamation {vertical-align:middle; margin:0 0 0 5px;}
-form input.verify,
-form select.verify {border:1px solid #f2f180;}
+form {
+	fieldset:first-child,
+	fieldset:nth-of-type(1) {margin-top:0;}
+	fieldset {margin:15px 0 0 0;}
+	label {width:100px; display:inline-block; padding:6px 0 0 0;}
+	select + label,
+	input[type=password] + label,
+	select + .exclamation + label,
+	input[type=password] + .exclamation + label {margin-left:40px; margin-right:10px; width:auto;}
+	.valid {color:#999; padding-left:10px;}
+	#accountName,
+	#tagName,
+	#profileName {width:190px;}
+	#transDescription {width:290px;}
+	#selectTags {width:290px;}
+	#profilePassword,
+	#newProfilePassword,
+	#checkProfilePassword {width:80px;}
+	#transAmount {width:90px; text-align:right;}
+	#initialBalance {width:70px; text-align:right;}
+	.fullCalendar {width:68px;}
+	.fullCalendar + .calendarIco {vertical-align:top; opacity:.6;}
+	.fullCalendar + .calendarIco:hover {opacity:1;}
+	input + .exclamation,
+	select + .exclamation {vertical-align:middle; margin:5px 0 0 5px; position: absolute;}
+	input.verify,
+	select.verify {border:1px solid #f2f180;}
+}
 
-.selectOptions {display:inline-block; vertical-align:top;}
-.selectOptions > span {opacity:.6; display:block; float:left; width:25px; height:25px; cursor:pointer; text-indent:-99999px; border:1px solid white; background-position:center center; background-repeat:no-repeat; margin-right:10px;}
-.selectOptions > span:hover {opacity:1;}
-.selectOptions > span.selected {background-color:#F7F7F7; border:1px solid #CCC; opacity:1;}
-.selectOptions.transType > span[data-value="2"] {background-image:url(../_img/icons/plus-octagon.png);}
-.selectOptions.transType > span[data-value="1"] {background-image:url(../_img/icons/minus-octagon.png);}
-.selectOptions.transType > span[data-value="3"] {background-image:url(../_img/icons/arrow-switch.png);}
-.selectOptions.accountType > span[data-value="1"] {background-image:url(../_img/icons/credit-card.png);}
-.selectOptions.accountType > span[data-value="2"] {background-image:url(../_img/icons/money-coin.png);}
-.selectOptions.accountType > span[data-value="3"] {background-image:url(../_img/icons/point.png);}
-.selectOptions.accountType > span[data-value="4"] {background-image:url(../_img/icons/wallet.png);}
-.selectOptions.accountType > span[data-value="5"] {background-image:url(../_img/icons/money.png);}
+.selectOptions {display:inline-block; vertical-align:top;
+	> span {opacity:.6; display:block; float:left; width:25px; height:25px; cursor:pointer; text-indent:-99999px; border:1px solid white; background-position:center center; background-repeat:no-repeat; margin-right:10px;}
+	> span:hover {opacity:1;}
+	> span.selected {background-color:#F7F7F7; border:1px solid #CCC; opacity:1;}
+	&.transType {
+		> span[data-value="2"] {background-image:url(../_img/icons/plus-octagon.png);}
+		> span[data-value="1"] {background-image:url(../_img/icons/minus-octagon.png);}
+		> span[data-value="3"] {background-image:url(../_img/icons/arrow-switch.png);}	
+	}
+	&.accountType {
+		> span[data-value="1"] {background-image:url(../_img/icons/credit-card.png);}
+		> span[data-value="2"] {background-image:url(../_img/icons/money-coin.png);}
+		> span[data-value="3"] {background-image:url(../_img/icons/point.png);}
+		> span[data-value="4"] {background-image:url(../_img/icons/wallet.png);}
+		> span[data-value="5"] {background-image:url(../_img/icons/money.png);}
+	}
+}
 
 /* Messages */
-.message {font-weight:bold; padding:5px 10px; border-bottom:2px solid #999; color:#999; background:#f7f7f7; margin:0 0 10px 0; position:fixed; left:0; top:0; right:0; z-index:10;}
-.message .wrap {background-position:40px center; background-repeat:no-repeat;}
-.message.error {background-color:#f6e7e7; border-color:#c63a3a; color:#c63a3a;}
-.message.success {background-color:#e1f7e4; border-color:#92b997; color:#92b997;}
-.message.success .wrap {background-image:url(../_img/icons/tick.png); padding-left:65px;}
-.message.alert {background-color:#ffffdf; border-color:#ececb9; color:#cbcb8d;}
-.message strong {text-decoration:underline;}
+.message {
+	font-weight:bold; padding:5px 10px; border-bottom:2px solid #999; color:#999; background:#f7f7f7; margin:0 0 10px 0; position:fixed; left:0; top:0; right:0; z-index:10;
+	&.success {
+		background-color:#e1f7e4; border-color:#92b997; color:#92b997;
+		.wrap {background-image:url(../_img/icons/tick.png); padding-left:65px;}
+	}
+	&.alert {background-color:#ffffdf; border-color:#ececb9; color:#cbcb8d;}
+	&.error {background-color:#f6e7e7; border-color:#c63a3a; color:#c63a3a;}
+	.wrap {background-position:40px center; background-repeat:no-repeat;}
+	strong {text-decoration:underline;}
+}
 
 /* Other styles */
 .footerInfo {background:#F7F7F7; text-align:right; padding:10px 5px; margin:10px 0 0 0; clear:both;}
 
+/* @section For page styles
+===========================*/
+.myProfile {
+	form {float: left; margin-bottom: 25px; width:431px;}
+	.changePhoto {float: left; margin-left: 25px;}
+	.fullCalendar {margin-right: 43px;}
+	.fieldset {
+		width: 431px;
+		input {float: right; margin-left: 15px;}
+	}
+	label[for="profileGender"] {width: 41px;}
+}

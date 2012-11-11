@@ -215,6 +215,7 @@ jQuery.fn.blackout = function(options, callback) {
 	options = jQuery.extend({
 		animationspeed: 'normal',
 		blackoutclass: 'blackout',
+		blackoutid: 'blackout',
 		content: null,
 		action: 'open',
 		zindex: 1000
@@ -223,11 +224,11 @@ jQuery.fn.blackout = function(options, callback) {
 
 	if(options.action != 'close' && options.action != "remove") {
 		//Prevent
-		if(jQuery('#'+options.blackoutclass).length != 0) {
-			jQuery('#'+options.blackoutclass).fadeOut(options.animationspeed,function(){jQuery(this).remove();});
+		if(jQuery('#'+options.blackoutid).length != 0) {
+			jQuery('#'+options.blackoutid).fadeOut(options.animationspeed,function(){jQuery(this).remove();});
 		}
 
-		jQuery('<div id="'+options.blackoutclass+'" style="width:100%; height:100%; top:0; left:0; position:fixed; z-index:'+options.zindex+';"><div class="wrapper">'+options.content+'</div></div>').prependTo('body')
+		jQuery('<div id="'+options.blackoutid+'" class="'+options.blackoutclass+'" style="width:100%; height:100%; top:0; left:0; position:fixed; z-index:'+options.zindex+';"><div class="wrapper">'+options.content+'</div></div>').prependTo('body')
 			.hide()
 			.fadeIn(options.animationspeed, function(){
 				//On complete
@@ -237,13 +238,13 @@ jQuery.fn.blackout = function(options, callback) {
 				}
 			});
 			mouse_is_inside = false;
-			jQuery('#'+options.blackoutclass).find('.wrapper').hover(function(){ 
+			jQuery('#'+options.blackoutid).find('.wrapper').hover(function(){ 
 				mouse_is_inside = true; 
 			}, function(){ 
 				mouse_is_inside = false; 
 			});
 			
-			jQuery('#'+options.blackoutclass).bind('click', function(){
+			jQuery('#'+options.blackoutid).bind('click', function(){
 				if(mouse_is_inside == false)
 					jQuery().blackout({action:'close'});
 			});
@@ -255,7 +256,7 @@ jQuery.fn.blackout = function(options, callback) {
 		});
 	}
 	else if(options.action == "remove") {
-		jQuery('#'+options.blackoutclass).fadeOut(options.animationspeed,function(){
+		jQuery('#'+options.blackoutid).fadeOut(options.animationspeed,function(){
 			jQuery(this).remove();
 			//On complete
 			if(typeof eval(callback)== 'function') {
@@ -267,7 +268,7 @@ jQuery.fn.blackout = function(options, callback) {
 		jQuery(document).unbind('keyup');
 	}
 	else {
-		jQuery('#'+options.blackoutclass).fadeOut(options.animationspeed,function(){
+		jQuery('#'+options.blackoutid).fadeOut(options.animationspeed,function(){
 			jQuery(this).remove();
 			//On complete
 			if(typeof eval(callback)== 'function') {
@@ -315,7 +316,8 @@ jQuery.fn.popUp = function(options, callback) {
 		ajax: false,
 		centered:true,
 		beforestart:null,
-		data:null
+		data:null,
+		blackoutclass: 'blackout'
 	}, options);	
 	
 	//////////Set
@@ -375,7 +377,7 @@ jQuery.fn.popUp = function(options, callback) {
 	////////Actions
 	//Create elements
 	if(jQuery().blackout) 
-		jQuery().blackout({content:html}, function(){
+		jQuery().blackout({content:html, blackoutclass: options.blackoutclass}, function(){
 			//On complete
 			if(options.ajax == false && typeof eval(callback)== 'function')  {
 				jQuery.fn.callback = callback;
@@ -513,7 +515,7 @@ function updateLoggedTime(){
 	var text = '';
 	if(hours != 0)
 		text += hours+'h ';
-	text += minutes+' min';
+	text += minutes+'min';
 	
 	//Update counter	
 	document.getElementById('loggedTime').innerHTML = text;
@@ -675,8 +677,8 @@ jQuery.fn.verifyInputs = function(){
 		'#profileName': /^.{3,100}$/,
 		'#profileBirthday': /^[\d]{2}[\/][\d]{2}[\/][\d]{4}$/,
 		'#profilePassword': /^.{6,12}$/,
-		'#initialBalance': /^([1-9]{1}[0-9]{0,2}(\.[0-9]{3})*(\,[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\,[0-9]{0,2})?|0(\,[0-9]{0,2})?|(\,[0-9]{1,2})?)$/
-		//'#initialBalance': /^[\d]{0,3}([.])[\d]{0,3}([,])[\d]{2}$/
+		'#initialBalance': /^([1-9]{1}[0-9]{0,2}(\.[0-9]{3})*(\,[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\,[0-9]{0,2})?|0(\,[0-9]{0,2})?|(\,[0-9]{1,2})?)$/,
+		'#profileEmail': /^[\w-]+(\.[\w-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)*?\.[a-z]{2,6}|(\d{1,3}\.){3}\d{1,3})(:\d{4})?$/
 	};
 	
 	//Regex verify
@@ -1019,10 +1021,10 @@ jQuery.fn.hashEnable = function(){
 		['#adicionarMarcador', controlPath+'tags/addTag.js', 'popUp', 'Adicionar marcador'],
 		['#editarMarcador', controlPath+'tags/editTag.js', 'popUp', 'Editar Marcador'],
 		['#removerMarcador', controlPath+'tags/removeTag.js', 'popUp', 'Remover Marcador'],
-		['#meuPerfil', controlPath+'myProfile/profile.js', 'popUp', 'Meu perfil'],
 		['#adicionarTransacao',controlPath+'transactions/addTransaction.js','popUp', 'Adicionar transação'],
 		['#editarTransacao',controlPath+'transactions/editTransaction.js','popUp', 'Editar transação'],
-		['#removerTransacao',controlPath+'transactions/removeTransaction.js','popUp', 'Remover transação']
+		['#removerTransacao',controlPath+'transactions/removeTransaction.js','popUp', 'Remover transação'],
+		['#meuPerfil', controlPath+'profile/myProfile.js','popUp','Editar meu perfil']
 	];
 	
 	//On hash change
