@@ -144,7 +144,7 @@
 							foreach($inf as $in):
 								$arr = array_keys($info);
 								$arr2 = array_keys($inf);
-								echo "'".thisMonthName($arr2[$u], true)." - ".$arr[$o]."',";
+								echo "'".thisMonthName($arr2[$u], true)." ".$arr[$o]."',";
 								$u++;
 							endforeach;
 							$o++; $u=0;

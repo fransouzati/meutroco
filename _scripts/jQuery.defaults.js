@@ -50,7 +50,6 @@ $.ajaxSetup({
 		$('#loadingRequest').fadeOut(300);
 	}
 });
-
 /* ***** Highcharts ***** */
 Highcharts.setOptions({
 		lang: {

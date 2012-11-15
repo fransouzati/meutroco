@@ -31,7 +31,7 @@
 					$generatedDate = 1000 * strtotime($year .'-' . $toMonth . '-01');
 				
 					$seriesGraph .= '[';
-					$seriesGraph .= 'Date.UTC(' . $year .',' . ($toMonth - 1) . ',01),'; //Base zero para javascript (0 - 11)
+					$seriesGraph .= 'Date.UTC(' . $year .',' . ($toMonth - 1) . ',1),'; //Base zero para javascript (0 - 11)
 
 					$TodayDiff = $monthsLeft + $o;
 					foreach($balances as $accountId => $years): 					//Conta
@@ -200,8 +200,7 @@
 				var year = <?php echo date('Y'); ?>;
 				var month = <?php echo date('m'); ?>;
 				var d = new Date(this.x);
-				d = new Date(new Date(d).setMonth(d.getMonth()+1));
-				var monthDiff = year - d.getFullYear();
+				d.setDate(32); // Hack?
 				html += '<div style="font-weight:bold; color:#999;">' + convertToUnicode(interface.i18n.date.monthNames[d.getMonth()]) + ' de ' + d.getFullYear() + '</div>';
 				html += '<br/><span style="color:#CCC;">-------</span><br/>';
 				for(i=0; i < this.points.length; i++) {
@@ -221,9 +220,10 @@
 		xAxis: {
 			type: 'datetime',
 			dateTimeLabelFormats: {
-				month: '%b.%y'
+				month: '%b <br /> %Y'
 			},
-			maxZoom: 31 * 24 * 3600000
+			maxZoom: 31 * 24 * 3600000,
+			tickInterval: 86400000 * 31
 		},
 		series: <?php echo $seriesGraph; ?>
 	 });
