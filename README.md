@@ -35,12 +35,19 @@ Contas:
 +	Nas transações, inserir opção de parcelamento.
 +	Ao excluir uma conta, dar a opção de passar todas as transações para outra conta ou deletar todas as transações.
 
+
+Changelog
+----------
+v0.8
++	Nova página de edição de perfil
++	Correção bugs #1, #2 e #5
++	Alterações de textos no menu
++	Avatar padrão para homens e mulheres
+
 API (Não incluso no GIT, projeto privado)
 -----------------------------------------
 
 ### Definições iniciais ###
-+	A URL será um subdomínio. Exemplo: http://api.check.com.br
-+	Usaremos, como exemplo, o endereço api.foo.com
 +	Tipo de dados: JSON
 +	Toda e qualquer ação, verificar se o aplicativo (api_key) tem permissão para isso
 +	Toda e qualquer ação, verificar o token gerado
