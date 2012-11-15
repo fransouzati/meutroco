@@ -1,4 +1,4 @@
-<?php ob_start(); ?>
+<?php ob_start(); session_start(); ?>
 <?php 
 //Config
 require_once('config.php');
@@ -152,20 +152,20 @@ class User {
 	
 	/* ***** Retorna e grava Token ***** */
 	public static function token() {
-		if(isset($_GET['token']) && isset($_COOKIE['token'])) {
+		if(isset($_GET['token']) && isset($_SESSION['token'])) {
 			$loc = curPageUrl();
 			$loc = explode('?',$loc);
 			$loc = $loc[0];
 			header('Location: '.$loc);
 		}
-		else if(isset($_GET['token']) && !isset($_COOKIE['token'])) {
-			setcookie('token',$_GET['token'],NULL,'/');
+		else if(isset($_GET['token']) && !isset($_SESSION['token'])) {
+			$_SESSION['token'] = $_GET['token'];
 			$loc = curPageUrl();
 			$loc = explode('?',$loc);
 			$loc = $loc[0];
 			header('Location: '.$loc);
-		} elseif(isset($_COOKIE['token'])) {
-			return $_COOKIE['token'];
+		} elseif(isset($_SESSION['token'])) {
+			return $_SESSION['token'];
 		} else {
 			header('Location: '.SITE_URL);
 		}
