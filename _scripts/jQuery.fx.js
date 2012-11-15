@@ -485,6 +485,23 @@ jQuery.fn.popUp = function(options, callback) {
 };
 
 /*
+ * Fn: closePopUp
+ * Description: Close the lighbox
+ * Author: Rafael Heringer Carvalho
+ */
+jQuery.fn.closePopUp = function(callback) {
+	if(history.length > 2)
+		history.go(-1);
+
+	if(typeof eval(callback)== 'function') {
+		setTimeout(function(){
+			callback();
+		}, 200);
+	}
+
+};
+
+/*
  * Fn: updateLoggedTime
  * Desc: Update the loggedTime
  */

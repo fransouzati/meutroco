@@ -23,8 +23,9 @@
 					success: function(data){
 						/* Ok */
 						GLOBAL_MESSAGE = {type:'success', message: 'A transação <strong>'+$('.popUp form #transDescription').val()+'</strong> foi adicionada com sucesso.'};
-						jQuery().blackout({action:'close'});
-						reloadPage(null, true);
+						jQuery().closePopUp(function(){
+							reloadPage(false, true);
+						});
 					}
 				});
 			}

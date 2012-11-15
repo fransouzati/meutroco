@@ -58,7 +58,7 @@ h3 {font-size:12px; margin:0 0 5px 0; background-position:10px center; backgroun
 #loadingRequest {background:#FF9; border:1px solid #FC3; position:fixed; margin:-10px 0 0 -100px; left:50%; padding:15px 0 10px 0; top:0; width:150px; text-align:center; border-radius:10px; z-index:1010; opacity:.9; font-size:10px; display:none;}
 
 /* Tooltip */
-.balloonArrow {display:block; width:15px; height:9px; background:url(../_img/balloonArrow.png) no-repeat left top; position:absolute; top:-9px; left:15px;}
+.balloonArrow {display:block; width:15px; height:9px; background:url(../_img/balloonArrow.png) no-repeat left top; position:absolute; top:-9px; left:15px; }
 
 /* Tip */
 #ui-tip {border:1px solid #73A8C0; background:white; border-radius:5px; padding:5px; font-size:10px; opacity:.8; box-shadow:3px 3px 5px rgba(0,0,0,.2); display: none;}
