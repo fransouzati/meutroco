@@ -152,19 +152,14 @@ class User {
 	
 	/* ***** Retorna e grava Token ***** */
 	public static function token() {
-		if(isset($_GET['token']) && isset($_SESSION['token'])) {
-			$loc = curPageUrl();
-			$loc = explode('?',$loc);
-			$loc = $loc[0];
-			header('Location: '.$loc);
-		}
-		else if(isset($_GET['token']) && !isset($_SESSION['token'])) {
+		if(isset($_GET['token'])) {
 			$_SESSION['token'] = $_GET['token'];
 			$loc = curPageUrl();
 			$loc = explode('?',$loc);
 			$loc = $loc[0];
 			header('Location: '.$loc);
-		} elseif(isset($_SESSION['token'])) {
+		}
+		elseif(isset($_SESSION['token'])) {
 			return $_SESSION['token'];
 		} else {
 			header('Location: '.SITE_URL);

@@ -113,7 +113,7 @@
 <div class="block" id="mostSpending">
 	
 	<? /* Título */  ?>
-	<h3>O que mais gastei no mês<span class="actions"><span class="viewAll"><a href="#marcadores" title="Ver todas os marcadores">Ver marcadores</a></span></span></h3>
+	<h3>O que mais gastei no mês<span class="actions"><span class="viewAll"><a href="#marcadores" title="Ver todos os marcadores">Ver marcadores</a></span></span></h3>
 	
 	<?php 
 	/* Verifica se existem marcadores */

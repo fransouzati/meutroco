@@ -26,7 +26,7 @@
 		apiKey: "<?php echo siteInfo::apiKey() ?>" //TODO: Apagar essa linha
 	};
 	
-	/* Uservoice Script */
+	/* Uservoice Script **/
 	// var uvOptions = {};
 	// (function() {
 	// 	var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
