@@ -12,18 +12,11 @@ SEGURANÇA:
 +	Criptografar a senha também na página de edição do perfil.
 
 TOKEN:
-+	Gerar token quando o usuário logar-se. Assim não vai ser preciso cookie e session.
-+	Antes de gerar o token, verificar a APIKEY do aplicativo e suas permissões.
 +	Para cada atividade do usuário, resetar o tempo de expiração do token.
 +	Tempo de expiração para token inativo: 30min.
-+	O token terá sempre que ser passado como querystring, para a API pegar via _GET, junto com a API key.
 
 LOGIN:
-+	Login via post.
-+	Verificar se existe e suas permissões.
-+	Retornar mensagem de erro ou apenas o token gerado.
 +	Ao logar, verificar se já não existe um token ativo para o usuário e para o aplicativo. Se sim, retornar este.
-+	Salvar o token atrelado ao ID do usuário, ao horário de login e ao tempo de expiração do token sem atividade.
 
 DESIGN:
 +	Fazer a landing-page do site
