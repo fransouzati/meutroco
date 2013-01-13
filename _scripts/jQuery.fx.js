@@ -1121,7 +1121,7 @@ jQuery(document).ready(function(){
 		window.location.hash = 'resumo';
 	jQuery('body').hashEnable();
 	jQuery(window).hashchange();
-	
+
 	/* Reload Sidebar */
 	reloadSidebar();
 	
