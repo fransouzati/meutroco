@@ -1,1 +1,86 @@
-*{background:none;font-family:Arial, Helvetica, sans-serif!important}body{background:white;margin:0;padding:0}@page{margin:0.3in}#header,#footer,#navigation,#contentWrap{width:100%;position:relative}#mainContent{width:78%;position:relative!important}.actions{display:none}header{height:125px!important;border-bottom:1px dashed #999}#navigation{display:none}#sidebar{margin-right:2%;width:20%}#sidebar h3{padding-left:5px}#userArea .avatar .avatarEffect{display:none}.block{width:48%!important;margin-right:2%!important}.block.double{width:98%!important}
+/*
+ * Check Project
+ * 
+ * @project		Check
+ * @site		--
+ * @version		1.1
+ * @package		print
+ * @author		Rafael Heringer Carvalho
+ * @copyright	2011 Letsrider!
+ */
+/* line 12, source/print.scss */
+* {
+  background: none;
+  font-family: Arial, Helvetica, sans-serif!important;
+}
+
+/* line 13, source/print.scss */
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+@page {
+  margin: 0.3in;
+}
+
+/* line 15, source/print.scss */
+#header, #footer, #navigation, #contentWrap {
+  width: 100%;
+  position: relative;
+}
+
+/* line 16, source/print.scss */
+#mainContent {
+  width: 78%;
+  position: relative!important;
+}
+
+/* line 17, source/print.scss */
+.actions {
+  display: none;
+}
+
+/* Header */
+/* line 20, source/print.scss */
+header {
+  height: 125px!important;
+  border-bottom: 1px dashed #999;
+}
+
+/* Navigation */
+/* line 23, source/print.scss */
+#navigation {
+  display: none;
+}
+
+/* Sidebar */
+/* line 26, source/print.scss */
+#sidebar {
+  margin-right: 2%;
+  width: 20%;
+}
+
+/* line 27, source/print.scss */
+#sidebar h3 {
+  padding-left: 5px;
+}
+
+/* User área */
+/* line 30, source/print.scss */
+#userArea .avatar .avatarEffect {
+  display: none;
+}
+
+/* Block */
+/* line 33, source/print.scss */
+.block {
+  width: 48%!important;
+  margin-right: 2%!important;
+}
+
+/* line 34, source/print.scss */
+.block.double {
+  width: 98%!important;
+}
