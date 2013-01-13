@@ -113,19 +113,19 @@
 <div class="block" id="mostSpending">
 	
 	<? /* Título */  ?>
-	<h3>O que mais gastei no mês<span class="actions"><span class="viewAll"><a href="#marcadores" title="Ver todos os marcadores">Ver marcadores</a></span></span></h3>
+	<h3>O que mais gastei no mês<span class="actions"><span class="viewAll"><a href="#tags" title="Ver todas as tags">Ver tags</a></span></span></h3>
 	
 	<?php 
-	/* Verifica se existem marcadores */
+	/* Verifica se existem tags */
 	if(count($tags) == 0): 
 	?>
 		<div class="noData">
-			Os seus gastos são registrados em marcadores. <a href="#adicionarMarcador" title="Cadastrar primeiro marcador">Clique aqui</a> para cadastrar seu primeiro marcador!
+			Os seus gastos são registrados em tags. <a href="#adicionarTag" title="Cadastrar primeiro tag">Clique aqui</a> para cadastrar seu primeiro tag!
 		</div>
 	<?php else: ?>
 
 		<?php 
-		/* Loop de marcadores */ 
+		/* Loop de tags */ 
 		$i = 0; 
 		foreach($tags as $tag):
 			if($tag->total_spend < 0): $i++;  	//Verifica se é negatico
@@ -133,16 +133,16 @@
 				<?php if($i == 1): ?>
 				<div id="mostSpendingGraph" class="graph"><!-- Gráfico --></div>
 
-				<? /* Lista de marcadores */ ?>
+				<? /* Lista de tags */ ?>
 				<table class="tableList">
 				<?php endif; ?>
 						<tr data-id="<?php echo $tag->id ?>" data-name="<?php echo $tag->name ?>" data-role="tag">
 							<td class="name"><?php echo $tag->name ?>:</td>
 							<td class="amount <?php if($tag->total_spend >= 0) echo 'positive'; else echo 'negative'; ?>"><?php echo moneyFormat($tag->total_spend, true); ?></td>
 							<td class="actions">
-									<span class="viewSmall"><a href="#verMarcador?id=<?php echo $tag->id ?>" title="Ver transações para este marcador"></a></span>
-									<span class="editSmall"><a href="#editarMarcador?id=<?php echo $tag->id ?>" title="Editar este marcador"></a></span>
-									<span class="removeSmall"><a href="#removerMarcador?id=<?php echo $tag->id ?>" title="Excluir este marcador"></a></span>
+									<span class="viewSmall"><a href="#verTag?id=<?php echo $tag->id ?>" title="Ver transações para esta tag"></a></span>
+									<span class="editSmall"><a href="#editarTag?id=<?php echo $tag->id ?>" title="Editar esta tag"></a></span>
+									<span class="removeSmall"><a href="#removerTag?id=<?php echo $tag->id ?>" title="Excluir esta tag"></a></span>
 							</td>
 						</tr>
 				<?php if($i == count($tags)): ?>
@@ -152,10 +152,10 @@
 			endif; 
 		endforeach; 
 
-		/* Verifica se existiu algum marcador */
+		/* Verifica se existiu alguma tag */
 		if($i == 0): ?>
 			<div class="noData">
-				Os seus marcadores ainda não registraram gastos para este mês. Parabéns!
+				Os seus tags ainda não registraram gastos para este mês. Parabéns!
 			</div>
 		<?php endif;
 	endif; 

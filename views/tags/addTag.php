@@ -1,4 +1,4 @@
-<h2>Adicionar um Marcador</h2>
+<h2>Adicionar uma tag</h2>
 <form>
 	<fieldset>
 		<label for="tagName">Nome:</label>

@@ -9,7 +9,7 @@
 	
 
 ?>
-<h2>Marcador: <strong><?php echo $myTag[0]->name; ?></strong> <span class="actions"><span class="goBack"><a href="javascript:;" title="Voltar para página anterior">Voltar</a></span></span></h2>
+<h2>Tag: <strong><?php echo $myTag[0]->name; ?></strong> <span class="actions"><span class="goBack"><a href="javascript:;" title="Voltar para página anterior">Voltar</a></span></span></h2>
 
 
 <div class="block <?php if(count($transactions) != 0): echo "double"; endif; ?>" id="tagTransactions">
@@ -23,7 +23,7 @@
 	<h3>Lista de transações</h3>
 	<?php if(count($transactions) == 0): ?>
 		<div class="noData">
-			Você ainda não cadastrou nenhuma transação para este marcador. 
+			Você ainda não cadastrou nenhuma transação para esta tag. 
 		</div>
 	<?php else: ?>
 
@@ -65,7 +65,10 @@
 					endif;
 					
 					//Verify if MONTH exists
-					$info[date("Y",$thisDate)][date("m",$thisDate)]["amount"] += $transaction->amount;
+					if(!isset($info[date("Y",$thisDate)][date("m",$thisDate)]["amount"]))
+						$info[date("Y",$thisDate)][date("m",$thisDate)]["amount"] = $transaction->amount;
+					else
+						$info[date("Y",$thisDate)][date("m",$thisDate)]["amount"] += $transaction->amount;
 					
 					//Increment Total Amount
 					$totalAmount += $transaction->amount;
@@ -113,7 +116,7 @@
 (function($){
 	/* ***** Generate Month Graph ***** */
 	<?php if(count($info) == 0): ?>
-		$('#monthBalanceGraph').css('height','auto').html('<div class="noData">Este marcador não registrou transações nos últimos meses.</div>');
+		$('#monthBalanceGraph').css('height','auto').html('<div class="noData">esta tag não registrou transações nos últimos meses.</div>');
 	
 	<?php else: ?>
 

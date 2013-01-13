@@ -25,7 +25,7 @@
 						GLOBAL_MESSAGE = {type:'success', message: 'A tag <strong>' + $('.popUp').find('#tagName').val() + '</strong> foi adicionada com sucesso.'};
 						jQuery().blackout({action:'close'});
 
-						if(window.location.actualPage == "marcadores") {
+						if(window.location.actualPage == "tags") {
 							reloadPage();
 						}
 					}

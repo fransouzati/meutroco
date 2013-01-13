@@ -7,11 +7,11 @@
 	$mostSpendTags = $api->getTags(10,'','most_expensive','asc',date($y.'-01-01'),date('Y-12-31'));
 	$cheaperTags = $api->getTags(10,'','most_valuable','desc',date($y.'-01-01'),date('Y-12-31'));
 ?>
-<h2>Ver Todos os Marcadores</h2>
+<h2>Ver Todos os tags</h2>
 
 <?php if(count($tags) == 0): ?>
 	<div class="block double noData">
-		Você ainda não cadastrou um marcador. <a href="#adicionarMarcador" title="Cadastrar primeiro marcador">Clique aqui</a> para começar!
+		Você ainda não cadastrou uma tag. <a href="#adicionarTag" title="Cadastrar primeiro tag">Clique aqui</a> para começar!
 	</div>
 <?php else: ?>
 
@@ -24,9 +24,9 @@
 				<td class="name"><?php echo $tag->name ?>:</td>
 				<td class="amount <?php if($tag->total_spend >= 0) echo 'positive'; else echo 'negative'; ?>"><?php echo moneyFormat($tag->total_spend, true); ?></td>
 				<td class="actions">
-					<span class="viewSmall"><a href="#verMarcador?id=<?php echo $tag->id ?>" title="Ver transações para este marcador"></a></span>
-					<span class="editSmall"><a href="#editarMarcador?id=<?php echo $tag->id ?>" title="Editar este marcador"></a></span>
-					<span class="removeSmall"><a href="#removerMarcador?id=<?php echo $tag->id ?>" title="Excluir este marcador"></a></span>
+					<span class="viewSmall"><a href="#verTag?id=<?php echo $tag->id ?>" title="Ver transações para esta tag"></a></span>
+					<span class="editSmall"><a href="#editarTag?id=<?php echo $tag->id ?>" title="Editar esta tag"></a></span>
+					<span class="removeSmall"><a href="#removerTag?id=<?php echo $tag->id ?>" title="Excluir esta tag"></a></span>
 				</td>
 			</tr>
 		<?php endif; endforeach; ?>
@@ -44,9 +44,9 @@
 				<td class="name"><?php echo $tag->name ?>:</td>
 				<td class="amount <?php if($tag->total_spend >= 0) echo 'positive'; else echo 'negative'; ?>"><?php echo moneyFormat($tag->total_spend, true); ?></td>
 				<td class="actions">
-					<span class="viewSmall"><a href="#verMarcador?id=<?php echo $tag->id ?>" title="Ver transações para este marcador"></a></span>
-					<span class="editSmall"><a href="#editarMarcador?id=<?php echo $tag->id ?>" title="Editar este marcador"></a></span>
-					<span class="removeSmall"><a href="#removerMarcador?id=<?php echo $tag->id ?>" title="Excluir este marcador"></a></span>
+					<span class="viewSmall"><a href="#verTag?id=<?php echo $tag->id ?>" title="Ver transações para esta tag"></a></span>
+					<span class="editSmall"><a href="#editarTag?id=<?php echo $tag->id ?>" title="Editar esta tag"></a></span>
+					<span class="removeSmall"><a href="#removerTag?id=<?php echo $tag->id ?>" title="Excluir esta tag"></a></span>
 				</td>
 			</tr>
 		<?php endif; endforeach; ?>
@@ -56,16 +56,16 @@
 <span class="clear"></span>
 
 <div class="block" id="allTags">
-	<h3>Todos os marcadores</h3>
+	<h3>Todos os tags</h3>
 	<table class="tableList">
     		<?php $i=0; foreach($tags as $tag): $i++; ?>
             <tr data-id="<?php echo $tag->id ?>" data-name="<?php echo $tag->name ?>" data-role="tag">
                 <td class="name"><?php echo $tag->name ?>:</td>
                 <td class="amount <?php if($tag->total_spend >= 0) echo 'positive'; else echo 'negative'; ?>"><?php echo moneyFormat($tag->total_spend, true); ?></td>
                 <td class="actions">
-					<span class="viewSmall"><a href="#verMarcador?id=<?php echo $tag->id ?>" title="Ver transações para este marcador"></a></span>
-					<span class="editSmall"><a href="#editarMarcador?id=<?php echo $tag->id ?>" title="Editar este marcador"></a></span>
-					<span class="removeSmall"><a href="#removerMarcador?id=<?php echo $tag->id ?>" title="Excluir este marcador"></a></span>
+					<span class="viewSmall"><a href="#verTag?id=<?php echo $tag->id ?>" title="Ver transações para esta tag"></a></span>
+					<span class="editSmall"><a href="#editarTag?id=<?php echo $tag->id ?>" title="Editar esta tag"></a></span>
+					<span class="removeSmall"><a href="#removerTag?id=<?php echo $tag->id ?>" title="Excluir esta tag"></a></span>
                 </td>
             </tr>
             <?php if(round($totalTags/2) == $i): ?>

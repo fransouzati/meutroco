@@ -68,7 +68,7 @@
 </header>
 
 <!-- FeedBack -->
-<!--<a id="giveFeedback" href="#feedback" title="Ideias? Sugestões? Problemas? Mande para agente">Feedback</a>-->
+<a id="giveFeedback" href="#feedback" title="Ideias? Sugestões? Problemas? Mande para agente">Feedback</a>
 
 <!-- navigation -->
 <nav id="navigation" role="navigation">
@@ -83,12 +83,12 @@
 			</ul>
 		</li>
 		<li class="nav-tags">
-			<a href="#marcadores" title="">Marcadores</a>
+			<a href="#tags" title="">Tags</a>
 			<ul>
 				<span class="balloonArrow"></span>
-				<!--<li class="nav-tag-edit"><a href="#editarMarcadores" title="Escolher e editar um marcador">Editar marcadores</a></li>-->
-				<li class="nav-tag-add"><a href="#adicionarMarcador" title="Adicionar um marcador">Criar novo marcador</a></li>
-				<li class="nav-tag-view"><a href="#marcadores" title="Visualizar todas os marcadores">Ver todos</a></li>
+				<!--<li class="nav-tag-edit"><a href="#editarTags" title="Escolher e editar um tag">Editar tags</a></li>-->
+				<li class="nav-tag-add"><a href="#adicionarTag" title="Adicionar uma tag">Criar nova tag</a></li>
+				<li class="nav-tag-view"><a href="#tags" title="Visualizar todas as tags">Ver todas</a></li>
 			</ul>
 		</li>
 		<!--<li class="nav-profile"><a href="#meuPerfil" title="Visualizar e editar meu perfil">Meu perfil</a></li>-->

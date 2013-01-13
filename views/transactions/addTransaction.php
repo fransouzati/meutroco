@@ -38,7 +38,7 @@
 		</select>
 	</fieldset>
 	<fieldset>
-		<label for="selectTags">Marcadores:</label>
+		<label for="selectTags">Tags:</label>
 		<input type="text" id="selectTags" name="tags" class="suggest tagSuggest" />
 	</fieldset>
 </form>

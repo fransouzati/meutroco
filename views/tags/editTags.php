@@ -1,4 +1,4 @@
-<h2>Editar Marcadores</h2>
+<h2>Editar tags</h2>
 <div class="block">
 		<table class="tableList">
 			<tr>
