@@ -31,6 +31,10 @@ Contas:
 
 Changelog
 ----------
+v0.9
++	Correção de bugs #6, #7, #8 e #9
++	Adicionado UserVoice
+
 v0.8
 +	Nova página de edição de perfil
 +	Correção bugs #1, #2 e #5
