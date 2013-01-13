@@ -65,9 +65,7 @@
 					endif;
 					
 					//Verify if MONTH exists
-					if(!isset($info[date("Y",$thisDate)][date("m",$thisDate)]["amount"]))
-						$info[date("Y",$thisDate)][date("m",$thisDate)]["amount"] = $transaction->amount;
-					else
+					if(isset($info[date("Y",$thisDate)][date("m",$thisDate)]["amount"]))
 						$info[date("Y",$thisDate)][date("m",$thisDate)]["amount"] += $transaction->amount;
 					
 					//Increment Total Amount

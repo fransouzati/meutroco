@@ -27,12 +27,12 @@
 	};
 	
 	/* Uservoice Script **/
-	// var uvOptions = {};
-	// (function() {
-	// 	var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-	// 	uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/eZeZg2zelZ2EutcvBvlG5w.js';
-	// 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-	// })();
+	var uvOptions = {};
+	(function() {
+		var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+		uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/eZeZg2zelZ2EutcvBvlG5w.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+	})();
 	
 	/* Analytics Script */
 	//////////////////////
@@ -68,7 +68,7 @@
 </header>
 
 <!-- FeedBack -->
-<a id="giveFeedback" href="#feedback" title="Ideias? Sugestões? Problemas? Mande para agente">Feedback</a>
+<!-- <a id="giveFeedback" href="#feedback" title="Ideias? Sugestões? Problemas? Mande para agente">Feedback</a> -->
 
 <!-- navigation -->
 <nav id="navigation" role="navigation">

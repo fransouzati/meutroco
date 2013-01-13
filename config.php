@@ -10,7 +10,7 @@
 define('TEST_SERVER',true);
 
 //Diretório da API
-TEST_SERVER ? define('API_PATH', 'http://127.0.0.1:8080/api.meutroco.com.br') : define('API_PATH', 'http://www.api.meutroco.com.br');
+TEST_SERVER ? define('API_PATH', 'http://127.0.0.1/api.meutroco.com.br') : define('API_PATH', 'http://www.api.meutroco.com.br');
 
 //Arquivo principal da API
 define('API_URL',API_PATH.'/api.php');
@@ -19,7 +19,7 @@ define('API_URL',API_PATH.'/api.php');
 TEST_SERVER ? define('API_KEY','d8988842-43d5-42b3-9049-af4bbc69') : define('API_KEY','d675432123-43d5-42b3-9049-af4bbc68');
 
 //Diretório do site
-TEST_SERVER ? define('SITE_URL','http://127.0.0.1:8080/meutroco.com.br') : define('SITE_URL','http://www.meutroco.com.br');
+TEST_SERVER ? define('SITE_URL','http://127.0.0.1/meutroco.com.br') : define('SITE_URL','http://www.meutroco.com.br');
 
 //Proxy URL
 define('PROXY_URL',SITE_URL.'/proxy.php');
