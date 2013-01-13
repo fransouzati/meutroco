@@ -1,17 +1,25 @@
 <?php  
 	require_once('../../functions.php'); 
-	$api = new API;
-	$myTag = $api->getTag($_GET['id']);
-	$transactions = $api->getTransactions(100,date('2011-01-01'),date('Y-m-31'),"",$_GET['id'],'date','asc');
-	$totalTransactions = count($transactions);
-	$info = array();
-	$totalAmount = 0;
-	
 
+	//Variáveis
+	$api = new 	API;
+	$myTag = $api->getTag($_GET['id']);				//Busca pela TAG
+	$transactions = $api->getTransactions(100,date('2011-01-01'),date('Y-m-31'),"",$_GET['id'],'date','asc');	//Todas as transações para esta tag
+	$totalTransactions = count($transactions);		//Quantidade total de transações
+	$totalAmount = 0;								//Total gasto nessa tag
+	$latestMonths = getLatestMonths();				//Lista dos últimos meses
+
+	//Cria array com valores vazios
+	$info = array();
+	for($i = 0; $i < count($latestMonths); $i++):
+		$info[$latestMonths[$i]] = 0;
+	endfor;
 ?>
+
+<!-- Título -->
 <h2>Tag: <strong><?php echo $myTag[0]->name; ?></strong> <span class="actions"><span class="goBack"><a href="javascript:;" title="Voltar para página anterior">Voltar</a></span></span></h2>
 
-
+<!-- Gráfico com últimos 12 meses de transações -->
 <div class="block <?php if(count($transactions) != 0): echo "double"; endif; ?>" id="tagTransactions">
 	<h3>Últimos 12 meses</h3>
 	<div class="graph" id="monthBalanceGraph"></div>
@@ -19,56 +27,41 @@
 
 <?php if(count($transactions) == 0): echo '<span class="blockDistance"></span>'; endif; ?>
 
+<!-- Lista de transações -->
 <div class="block" id="transactionsList">
 	<h3>Lista de transações</h3>
+
+	<?php /* Caso não possua nenhuma transação */ ?>
 	<?php if(count($transactions) == 0): ?>
 		<div class="noData">
 			Você ainda não cadastrou nenhuma transação para esta tag. 
 		</div>
-	<?php else: ?>
 
+	<?php /* Se existir transações */ ?>
+	<?php else: ?>
 		<table class="tableList">
 			<?php 
-				$i=0; 
-				foreach($transactions as $transaction): $i++; 
+
+				//Para cada transação
+				$i = 0;
+				foreach($transactions as $transaction): $i++;
+
+					//Data da transação
 					$thisDate = strtotime($transaction->date);
-					
-					//Sets
-					if(!isset($firstYear))
-						$firstYear = date("Y",$thisDate);
-					if(!isset($firstMonth)):
-						$firstMonth = date("m",$thisDate);
-						
-					//Year list
-					for($o = 0; $o <= date('Y') - $firstYear; $o++):
-						if(!isset($info[$firstYear + $o]))
-							$info[$firstYear + $o] = array();
-					endfor;
-					
-					//Month List
-					$o = 0;
-					foreach($info as $inf):
-						$arr = array_keys($info);
-						if($arr[$o] != date('Y')):
-							for($u = 0; $u <= 12 - $firstMonth; $u++):
-								if(!isset($info[$arr[$o]][$firstMonth + $u]))
-									$info[$arr[$o]][str_pad($firstMonth + $u, 2, '0', STR_PAD_LEFT)] = array("amount" => "0.00");
-							endfor;
-						else:
-							for($u = 0; $u < date('m'); $u++):
-								if(!isset($info[$arr[$o]][$u + 1]))
-									$info[$arr[$o]][str_pad($u + 1, 2, '0', STR_PAD_LEFT)] = array("amount" => "0.00");
-							endfor;
+
+					//Verifica se o mês e ano bate com últimos meses
+					foreach($latestMonths as $latestMonth):
+						$m = date('m', strtotime($latestMonth));		//Mês
+						$y = date('Y', strtotime($latestMonth));		//Ano
+
+						//O mês e ano bate em algum momento?
+						if(date('Y', $thisDate) == $y && date('m', $thisDate) == $m):
+							$info[$latestMonth] += $transaction->amount;
+							break;
 						endif;
-						$o++;
 					endforeach;
-					endif;
-					
-					//Verify if MONTH exists
-					if(isset($info[date("Y",$thisDate)][date("m",$thisDate)]["amount"]))
-						$info[date("Y",$thisDate)][date("m",$thisDate)]["amount"] += $transaction->amount;
-					
-					//Increment Total Amount
+
+					//Adiciona ao valor total
 					$totalAmount += $transaction->amount;
 			?>
 				<tr 
@@ -104,6 +97,7 @@
 	<?php endif; ?>
 </div>
 
+<!-- Total gasto nesta TAG -->
 <?php if(count($transactions) != 0): ?>
 <div class="footerInfo"><strong>Total:</strong> <?php echo moneyFormat($totalAmount, true); ?></div>
 <?php endif; ?>
@@ -112,46 +106,47 @@
 <!-- Script -->
 <script>
 (function($){
-	/* ***** Generate Month Graph ***** */
+	/* ***** Gerar gráfico mensal ***** */
+
+	<?php /* Caso não exista valores */ ?>
 	<?php if(count($info) == 0): ?>
 		$('#monthBalanceGraph').css('height','auto').html('<div class="noData">esta tag não registrou transações nos últimos meses.</div>');
 	
+	<?php /* Monta série para gráfico */ ?>
 	<?php else: ?>
 
 		<?php
-		$graphData = '';
-		foreach($info as $inf): 
-			foreach($inf as $in):
-				$math = (float)$in["amount"]; 
+			$graphData = '';
+			$categories = '[';
+
+			//Percorre os meses
+			foreach($latestMonths as $latestMonth): 
+
+				//Monta valor positivo ou negativo
+				$math = (float)$info[$latestMonth]; 
 				$math = $math * -1; 
-
 				$math2 = $math > 0 ? $math : $math * -1;
-
 				$graphData .= '{y: '.$math2.', color:"';
-				if($math > 0): $graphData .= "#ce6a6a"; else: $graphData .= "#8cce6a"; endif;
+				$math > 0 ? $graphData .= "#ce6a6a" : $graphData .= "#8cce6a"; 
 				$graphData.= '"},';
-			endforeach; 
-		endforeach;
+
+				//Monta categorias
+				$categories .= "'".thisMonthName(date('m', strtotime($latestMonth)), true)." ".date('Y', strtotime($latestMonth))."',";
+
+			endforeach;
+
+			$categories .= ']';
 		?>
+
 		monthBalanceGraph = new Highcharts.Chart({
-		 	chart: {renderTo: 'monthBalanceGraph',type: 'column'},
+		 	chart: {
+		 		renderTo: 'monthBalanceGraph', 
+		 		type: 'column'
+		 	},
 		 	legend: {enabled: false},
 			colors: ['#ce6a6a'],
 			xAxis: {
-				categories: [
-					<?php 
-						$o = 0; $u = 0;
-						foreach($info as $inf): 
-							foreach($inf as $in):
-								$arr = array_keys($info);
-								$arr2 = array_keys($inf);
-								echo "'".thisMonthName($arr2[$u], true)." ".$arr[$o]."',";
-								$u++;
-							endforeach;
-							$o++; $u=0;
-						endforeach;
-					?>
-				]
+				categories: <?php echo $categories; ?>
 				
 			},
 			series: [

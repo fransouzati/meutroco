@@ -211,7 +211,10 @@
 				return html;
 			}
 		},
-	 	chart: {renderTo: 'monthBalanceGraph',type: 'spline', zoomType: 'x'},
+	 	chart: {
+	 		renderTo: 'monthBalanceGraph',
+	 		type: 'spline'
+	 	},
 		colors: [
 			<?php $i=0; foreach($accounts as $acc): $i++; ?>
 				<?php echo "'".transactionTypeColor($acc->account_type_id)."',"; ?>

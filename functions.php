@@ -1,5 +1,7 @@
-<?php ob_start(); session_start(); ?>
 <?php 
+
+ob_start(); session_start();
+
 //Config
 require_once('config.php');
 
@@ -54,7 +56,6 @@ function dateFormat($date){
 	return $date->format('d/m/Y');
 }
 
-
 /* Retorna o nome do mês atual 
  ****************************************************** */
 function thisMonthName($m = "", $mini = false) {
@@ -108,6 +109,7 @@ function transactionType($type){
 	elseif($type == 5)
 		return 'others';
 }
+
 function transactionTypeColor($type){
 	if($type == 1)
 		return '#D98B26';
@@ -123,7 +125,6 @@ function transactionTypeColor($type){
 		return 'RED';
 }
 
-
 /* Retorna a URL do site atual
  ****************************************************** */
 function curPageURL() {
@@ -136,6 +137,18 @@ function curPageURL() {
   $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
  }
  return $pageURL;
+}
+
+/* Retorna a lista dos últimos x meses
+ ****************************************************** */
+function getLatestMonths($latest = 13) {
+	$arr = array();
+
+	for($i = 0; $i < $latest; $i++):
+		array_push($arr, date("Y-m-1", strtotime("- " . $i . " month")));
+	endfor;
+
+	return array_reverse($arr);
 }
 
 /* Funções básicas de usuário
@@ -165,7 +178,6 @@ class User {
 			header('Location: '.SITE_URL);
 		}
 	}
-
 }
 
 /* Converte caracteres UNICODE para acento
@@ -269,4 +281,5 @@ class API extends User {
 		return json_decode(file_get_contents(API_PATH.'/user/token='.$this->token()));
 	}
 }
+
 ?>
