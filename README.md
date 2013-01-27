@@ -2,32 +2,7 @@ Meu Troco
 =========
 Projeto meutroco open-source - Gerenciador financeiro pessoal. Ainda não conhece? Leia em: <http://www.rafaheringer.com.br/meu-troco-gestao-financeira-pessoal/>
 
-Próximos passos
----------------
-
-SEGURANÇA:
-+	Nas ações da API, verificar o tempo de expiração do token.
-+	Nas ações da API, verificar se o token está associado ao APIKEY da aplicação.
-+	Enviar informacoes de login/senha para a pagina login/index.php. Nesta página, criptografar a senha; Mascarar a API_KEY com uma máscara única (criptografar). Essa máscara terá uma parte "random", de apr. 7 caracteres. Essa mascara será cadastrada no BD e NUNCA mais poderá ser usada.  Assim evita que alguém copie a API_KEY e use  como um outro aplicativo.
-+	Criptografar a senha também na página de edição do perfil.
-
-TOKEN:
-+	Para cada atividade do usuário, resetar o tempo de expiração do token.
-+	Tempo de expiração para token inativo: 30min.
-
-LOGIN:
-+	Ao logar, verificar se já não existe um token ativo para o usuário e para o aplicativo. Se sim, retornar este.
-
-DESIGN:
-+	Fazer a landing-page do site
-
-Contas:
-+	Ao criar uma conta do tipo Cartão de Crédito, dar a opção do usuário setar a data de vencimento do cartão. Ao inserir uma transação no cartão, dar a opção de escolher em qual mês será o vencimento.
-+	Então, no menu, terá um ítem "Lançamentos Futuros" que, além de listar a fatura do cartão, irá listar as transações marcadas para o futuro.
-+	No Cartão de Crédito, não existirá "adicionar transação". Existirá duas opções "pagar fatura" e "adicionar compra".
-+	Nas transações, inserir opção de parcelamento.
-+	Ao excluir uma conta, dar a opção de passar todas as transações para outra conta ou deletar todas as transações.
-
+Quer opinar? Sugerir uma funcionalidade? Ver o que está sendo discutido? Veja em <https://trello.com/board/meu-troco-backlog/>
 
 Changelog
 ----------
@@ -78,6 +53,3 @@ API (Não incluso no GIT, projeto privado)
 +	3 - Poupança
 +	4 - conta Corrente
 +	5 - Outro
-
-### FUTURO ###
-+	Download de programa via ADOBE AIR. Verificar conexão com internet.
