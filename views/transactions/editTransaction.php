@@ -26,15 +26,23 @@
 	<fieldset>
 		<label for="accountFrom">Conta:</label>
 		<select id="accountFrom" name="accountFrom">
-			<?php foreach($api->getAccounts() as $acc){ ?> 
-				<option value="<?php echo $acc->id ?>" <?php if(isset($_GET['acc'])) if($_GET['acc'] == $acc->id) echo 'selected="selected"'; ?>><?php echo $acc->name ?></option>
-			<?php } ?>
+			<?php foreach($api->getAccounts() as $acc): ?>
+				<?php if(isset($_GET['acc']) && $_GET['acc'] == $acc->id): ?> 
+					<option value="<?php echo $acc->id ?>" selected <?php if($acc->status != 1) echo "disabled" ?>><?php echo $acc->name ?></option>
+				<?php elseif($acc->status == 1): ?>
+					<option value="<?php echo $acc->id ?>"><?php echo $acc->name ?></option>
+				<?php endif; ?>
+			<?php endforeach; ?>
 		</select>
 		<span class="transferTo transfer"></span>
 		<select id="accountTo" class="transfer" name="accountTo">
-			<?php foreach($api->getAccounts() as $acc){ ?> 
-				<option value="<?php echo $acc->id ?>" <?php if(isset($_GET['accto'])) if($_GET['accto'] == $acc->id) echo 'selected="selected"'; ?>><?php echo $acc->name ?></option>
-			<?php } ?>
+			<?php foreach($api->getAccounts() as $acc): ?> 
+				<?php if(isset($_GET['accto']) && $_GET['accto'] == $acc->id): ?> 
+					<option value="<?php echo $acc->id ?>" selected <?php if($acc->status != 1) echo "disabled" ?>><?php echo $acc->name ?></option>
+				<?php elseif($acc->status == 1): ?>
+					<option value="<?php echo $acc->id ?>"><?php echo $acc->name ?></option>
+				<?php endif; ?>
+			<?php endforeach; ?>
 		</select>
 	</fieldset>
 	<fieldset>

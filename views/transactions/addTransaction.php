@@ -26,9 +26,9 @@
 	<fieldset>
 		<label for="accountFrom">Conta:</label>
 		<select id="accountFrom" name="accountFrom">
-			<?php foreach($api->getAccounts() as $acc): ?> 
+			<?php foreach($api->getAccounts() as $acc): if($acc->status == 1): ?> 
 				<option value="<?php echo $acc->id ?>" <?php if(isset($_GET['acc'])) if($_GET['acc'] == $acc->id) echo 'selected="selected"'; ?>><?php echo $acc->name ?></option>
-			<?php endforeach; ?>
+			<?php endif; endforeach; ?>
 		</select>
 		<span class="transferTo transfer"></span>
 		<select id="accountTo" class="transfer" name="accountTo">

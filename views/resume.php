@@ -155,7 +155,7 @@
 		/* Verifica se existiu alguma tag */
 		if($i == 0): ?>
 			<div class="noData">
-				Os seus tags ainda não registraram gastos para este mês. Parabéns!
+				As suas tags ainda não registraram gastos para este mês. Parabéns!
 			</div>
 		<?php endif;
 	endif; 

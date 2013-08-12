@@ -33,7 +33,7 @@
 					/* Ok */
 					GLOBAL_MESSAGE = {type:'success', message: 'A conta <strong>'+query.name+'</strong> foi removida com sucesso.'};
 					jQuery().blackout({action:'close'}, function() {
-						reloadPage(null, true);
+						reloadSidebar();
 					});
 				}
 			});

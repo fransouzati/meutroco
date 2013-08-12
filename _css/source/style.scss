@@ -9,7 +9,6 @@
  * @copyright	2011 Letsrider!
  */
 
-@import "compass/reset";
 @import "compass/css3";
 
 /* ERIC'S MEYER RESET
@@ -17,12 +16,14 @@
 article, aside, dialog, figure, footer, header, nav, section {margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;display:block;}
 a {text-decoration:none; color:#73a8c0;}
 button::-moz-focus-inner, input::-moz-focus-inner {border: 0;}
+* {margin: 0; padding: 0; list-style-type: none; border: none;}
+
 
 /* BASIC DEF
 =============================*/
 html {/*height:100%; overflow-y: auto; background-color: transparent;*/}
-body { font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#666; /*height:100%; position: absolute; top: 0; left: 0; bottom: 0; right: 0; overflow-y: scroll; overflow-x: hidden;*/}
-#scrollableBody {background:url(../_img/backgrounds/body.jpg) repeat-x center top white; background-attachment:scroll;}
+body { font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#666; /*height:100%; position: absolute; top: 0; left: 0; bottom: 0; right: 0; overflow-y: scroll; overflow-x: hidden;*/ background:url(../_img/backgrounds/body.jpg) repeat-x center top white; background-attachment:scroll;}
+/* #scrollableBody {background:url(../_img/backgrounds/body.jpg) repeat-x center top white; background-attachment:scroll;} */
 @font-face {font-family:Sketch; src:url('SketchFlowPrint.ttf');}
 
 /* Scrollbars in Chrome 
@@ -278,6 +279,7 @@ select, input {border:none; background:url(../_img/backgrounds/InputBg.png) repe
 input {padding:4px 5px;}
 select {cursor:pointer;}
 select:focus, input[type=text]:focus, input[type=password]:focus {border:1px solid #999; background-image:url(../_img/backgrounds/InputBgInv.png); background-position:top left;}
+select option[disabled] {color:#D5D5D5;}
 input[type=button] {cursor:pointer;}
 
 /* Tags */

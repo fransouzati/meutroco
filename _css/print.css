@@ -11,7 +11,7 @@
 /* line 12, source/print.scss */
 * {
   background: none;
-  font-family: Arial, Helvetica, sans-serif!important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
 /* line 13, source/print.scss */
@@ -34,7 +34,7 @@ body {
 /* line 16, source/print.scss */
 #mainContent {
   width: 78%;
-  position: relative!important;
+  position: relative !important;
 }
 
 /* line 17, source/print.scss */
@@ -45,7 +45,7 @@ body {
 /* Header */
 /* line 20, source/print.scss */
 header {
-  height: 125px!important;
+  height: 125px !important;
   border-bottom: 1px dashed #999;
 }
 
@@ -76,11 +76,11 @@ header {
 /* Block */
 /* line 33, source/print.scss */
 .block {
-  width: 48%!important;
-  margin-right: 2%!important;
+  width: 48% !important;
+  margin-right: 2% !important;
 }
 
 /* line 34, source/print.scss */
 .block.double {
-  width: 98%!important;
+  width: 98% !important;
 }

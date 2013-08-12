@@ -23,7 +23,7 @@
 		<label for="profileEmail">Email:</label>
 		<input type="text" name="email" id="profileEmail" value="<?php echo $user->email;?>" />
 	</fieldset>
-	<fieldset>
+	<!-- <fieldset>
 		<p>Deseja alterar sua senha? Basta preencher os campos:</p>
 	</fieldset>
 	<fieldset>
@@ -31,7 +31,7 @@
 		<input type="password" name="password" id="profilePassword" />
 		<label for="checkProfilePassword">Nova senha:</label>
 		<input type="password" name="newPassword" id="newProfilePassword" />
-	</fieldset>
+	</fieldset> -->
 </form>
 
 <div class="changePhoto">

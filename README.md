@@ -6,11 +6,13 @@ Quer opinar? Sugerir uma funcionalidade? Ver o que está sendo discutido? Veja e
 
 Changelog
 ----------
-v0.9
+**11.08.2013**
++	Ordenação das contas agora por TIPO e por NOME
++	Exclusão de contas não apaga mais as transações
+
+**...**
 +	Correção de bugs #6, #7, #8 e #9
 +	Adicionado UserVoice
-
-v0.8
 +	Nova página de edição de perfil
 +	Correção bugs #1, #2 e #5
 +	Alterações de textos no menu

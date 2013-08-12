@@ -1,6 +1,8 @@
 # Header
-#Header set Access-Control-Allow-Credentials true
-#Header set Strict-Action GET
+#Header always set Access-Control-Allow-Origin http://www.meutroco.com.br
+#Header always set Access-Control-Allow-Credentials true
+#Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+#Header always set Access-Control-Allow-Headers x-requested-with
 
 # Options
 Options +FollowSymLinks
@@ -8,10 +10,16 @@ Options -Indexes
 
 # Conditions
 RewriteEngine on
-
-#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteBase /meutroco.com.br
+RewriteBase /
+#RewriteCond %{HTTP_HOST} !^www\. 
 #RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L] 
 
 RewriteCond %{SCRIPT_FILENAME} !-f 
 RewriteCond %{SCRIPT_FILENAME} !-d 
-RewriteBase /meutroco.com.br
+#Comentar para ambiente de teste
+#RewriteBase /meutroco.com.br
+
+### Páginas do hotsite
+RewriteRule ^novo-usuario$ views/register.php [NC]
+RewriteRule ^novo-usuario/$ views/register.php [NC]

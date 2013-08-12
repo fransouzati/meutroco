@@ -12,8 +12,8 @@
 <?php if(count($accounts) != 0): ?>
 	<h2>Minhas Contas</h2>
 	<div class="myAccountsList">
-		<?php $i=0; foreach($accounts as $acc): $i++; ?>	
-				<div id="sidebarAcc<?php echo $i ?>" class="account <?php echo transactionType($acc->account_type_id) ?>">
+		<?php $i=0; foreach($accounts as $acc): if($acc->status == 1): $i++; ?>	
+				<div id="sidebarAcc<?php echo $i ?>" class="account <?php echo transactionType($acc->account_type_id) ?>" data-status="<?php echo $acc->status ?>">
                     <h3 
 						data-id="<?php echo $acc->id ?>"
 						data-name="<?php echo $acc->name ?>"
@@ -59,7 +59,7 @@
 			$totalGanhos += $ganhos - $creditos;
 			$totalSaldo += $acc->balance;
 		?>
-		<?php endforeach; ?>
+		<?php endif; endforeach; ?>
 		<div class="account balance">
 			<ul class="tableList">
 				<li class="subtitle">Em <?php echo thisMonthName() ?>...</li>
