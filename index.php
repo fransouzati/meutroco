@@ -155,18 +155,18 @@ if(!empty($_POST))
 			</div>
 			<?php } ?>
 
-			<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+			<form method="post" action="<?php echo API_PATH . '/login' ?>" id="loginForm">
 				<input type="hidden" id="api_key" name="api_key" value="<?php echo API_KEY ?>" />
 				<input type="hidden" name="remember_me" id="remember_me" value="false">
 
 				<p><input type="text" name="username" value="<?php if(isset($_POST["username"])) { echo $_POST["username"]; } ?>" placeholder="Nome de usuário"></p>
 				<p><input type="password" name="password" value="" placeholder="Senha"></p>
-				<!-- <p class="remember_me">
+				<p class="remember_me">
 					<label>
 						<input type="checkbox" name="remember_me" id="remember_me">
 						Lembrar de mim?
 					</label>
-				</p> -->
+				</p>
 				<p class="submit"><input type="submit" name="commit" id="newfeedform" value="Entrar"></p>
 			</form>
 
