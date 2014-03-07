@@ -1,121 +1,4 @@
-<?php require_once('config.php'); //require_once("functions.php"); ?>
-
-<?php
-	/*
-		UserPie
-		http://userpie.com
-	*/
-	require_once("models/config.php");
-	
-	//Prevent the user visiting the logged in page if he/she is already logged in
-	//if(isUserLoggedIn()) { header("Location: minha-conta/"); die(); }
-?>
-<?php
-	/* 
-		Below is a very simple example of how to process a login request.
-		Some simple validation (ideally more is needed).
-	*/
-
-//Forms posted
-if(!empty($_POST))
-{
-		$errors = array();
-		$username = trim($_POST["username"]);
-		$password = trim($_POST["password"]);
-		if(isset($_POST["remember_me"]))
-			$remember_choice = trim($_POST["remember_me"]);
-		else
-			$remember_choice = false;
-	
-		//Perform some validation
-		//Feel free to edit / change as required
-		if($username == "")
-		{
-			$errors[] = lang("ACCOUNT_SPECIFY_USERNAME");
-		}
-		if($password == "")
-		{
-			$errors[] = lang("ACCOUNT_SPECIFY_PASSWORD");
-		}
-		
-		//End data validation
-		if(count($errors) == 0)
-		{
-			//A security note here, never tell the user which credential was incorrect
-			if(!usernameExists($username))
-			{
-				$errors[] = lang("ACCOUNT_USER_OR_PASS_INVALID");
-			}
-			else
-			{
-				$userdetails = fetchUserDetails($username);
-			
-				//See if the user's account is activation
-				if($userdetails["active"]==0)
-				{
-					$errors[] = lang("ACCOUNT_INACTIVE");
-				}
-				else
-				{
-					//Hash the password and use the salt from the database to compare the password.
-					$entered_pass = generateHash($password,$userdetails["password"]);
-
-					if($entered_pass != $userdetails["password"])
-					{
-						//Again, we know the password is at fault here, but lets not give away the combination incase of someone bruteforcing
-						$errors[] = lang("ACCOUNT_USER_OR_PASS_INVALID");
-					}
-					else
-					{
-						//passwords match! we're good to go'
-						
-						//Construct a new logged in user object
-						//Transfer some db data to the session object
-						$loggedInUser = new loggedInUser();
-						$loggedInUser->email = $userdetails["email"];
-						$loggedInUser->id = $userdetails["id"];
-						$loggedInUser->hash_pw = $userdetails["password"];
-						$loggedInUser->display_username = $userdetails["username"];
-						$loggedInUser->clean_username = $userdetails["username_clean"];
-						$loggedInUser->remember_me = $remember_choice;
-						$loggedInUser->api_key = $_POST['api_key'];
-						$loggedInUser->login = $userdetails["email"];
-						$loggedInUser->redirect = 'false';
-						$loggedInUser->remember_me_sessid = generateHash(uniqid(rand(), true));
-						
-						//Update last sign in
-						$loggedInUser->updatelast_sign_in();
-		
-						if($loggedInUser->remember_me == 0)
-							$_SESSION["userPieUser"] = $loggedInUser;
-							else if($loggedInUser->remember_me == 1) {
-							$db->sql_query("INSERT INTO ".$db_table_prefix."sessions VALUES('".time()."', '".serialize($loggedInUser)."', '".$loggedInUser->remember_me_sessid."')");
-							setcookie("userPieUser", $loggedInUser->remember_me_sessid, time()+parseLength($remember_me_length));
-						}
-						
-						//Redirect to user account page
-						$url = API_PATH . '/login';
-						$data = $loggedInUser;
-
-						// use key 'http' even if you send the request to https://...
-						$options = array(
-							'http' => array(
-								'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-								'method'  => 'POST',
-								'content' => http_build_query($data),
-							),
-						);
-						$context  = stream_context_create($options);
-						$result = file_get_contents($url, false, $context);
-
-						header("Location: minha-conta/?token=".$result);
-						exit(); die();
-					}
-				}
-			}
-		}
-	}
-?>
+<?php require_once('config.php'); ?>
 
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="pt-BR"> <![endif]-->
@@ -143,11 +26,7 @@ if(!empty($_POST))
 		<div class="login">
 			<h1>Meu Troco - Protegendo seu dinheiro</h1>
 
-			<?php if(!empty($_POST) && count($errors) > 0) { ?>
-			<div id="errors">
-				<?php errorBlock($errors); ?>
-			</div>     
-			<?php }	?> 
+			<div id="errors" style="display: none;"></div>     
 
 			<?php if(isset($_GET['status']) && $_GET['status'] == "success") { ?>
 			<div id="success">
@@ -161,12 +40,12 @@ if(!empty($_POST))
 
 				<p><input type="text" name="username" value="<?php if(isset($_POST["username"])) { echo $_POST["username"]; } ?>" placeholder="Nome de usuário"></p>
 				<p><input type="password" name="password" value="" placeholder="Senha"></p>
-				<p class="remember_me">
+				<!-- <p class="remember_me">
 					<label>
 						<input type="checkbox" name="remember_me" id="remember_me">
 						Lembrar de mim?
 					</label>
-				</p>
+				</p> -->
 				<p class="submit"><input type="submit" name="commit" id="newfeedform" value="Entrar"></p>
 			</form>
 
@@ -179,5 +58,16 @@ if(!empty($_POST))
 			<p>Esqueceu sua senha? <a href="index.html">Clique aqui</a>.</p>
 		</div> -->
 	</section>
+
+	<!-- Scripts -->
+	<script language="javascript">
+	/* Global Site Info */
+	siteInfo = {
+		url: "<?php echo SITE_URL ?>",
+		apiUrl: "<?php echo API_PATH ?>"
+	};
+	</script>
+	<script type="text/javascript" src="_scripts/jQuery.js"></script>
+	<script type="text/javascript" src="_scripts/control/home.js"></script>
 </body>
 </html>
